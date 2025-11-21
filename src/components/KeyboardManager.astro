@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components'
-// The bare import is now gone
+// REMOVED: import('...') line
 ---
 
 <div id="ninja-keys-wrapper">
@@ -8,13 +8,10 @@ import { Icon } from 'astro-icon/components'
 </div>
 
 <script>
-  // FINAL FIX: Using the direct path to the package's entry file.
-  // This bypasses the bare module resolution failure in Vite.
-  import('/node_modules/ninja-keys/dist/ninja-keys.js').then(() => {
-    // Cast to 'any' to expose the .data and .open() methods
-    const ninja = document.querySelector('ninja-keys') as any; 
+  // Script runs AFTER the global ninja-keys script is loaded (via the new HTML tag)
+  const ninja = document.querySelector('ninja-keys') as any; 
 
-    if (ninja) {
+  if (ninja) {
         ninja.data = [
             {
                 id: 'nav',
@@ -57,7 +54,7 @@ import { Icon } from 'astro-icon/components'
                         icon: 'mdi:file-pdf-box', 
                         handler: () => {
                             const link = document.createElement('a');
-                            link.href = '/cv.pdf'; // Points to public/cv.pdf
+                            link.href = '/cv.pdf'; 
                             link.download = 'Gabriel_Windlin_CV.pdf';
                             link.click();
                         }
@@ -65,10 +62,8 @@ import { Icon } from 'astro-icon/components'
                 ]
             },
         ];
-    }
-  });
+  }
 
-  // Open palette when the visible button is clicked
   window.addEventListener('open-palette', () => {
       const ninja = document.querySelector('ninja-keys') as any;
       if (ninja) ninja.open();
