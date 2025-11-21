@@ -13,15 +13,16 @@ import { education } from "@cv";
         return (
           <li class="relative">
             <div class="flex flex-col gap-2">
-              <header class="flex flex-col-reverse sm:flex-row sm:justify-end items-end sm:items-baseline text-right">
-                <time class="text-sm text-skin-muted font-mono mb-1 sm:mb-0">
-                  {startYear} - {endYear}
-                </time>
-                <h3 class="text-lg font-mono font-bold text-skin-base ml-4">
+              <header class="flex flex-col sm:flex-row justify-between items-baseline w-full">
+                <h3 class="text-lg font-mono font-bold text-skin-base mb-1 sm:mb-0">
                   <a href={url} target="_blank" class="hover:text-skin-accent transition-colors">
                     {institution}
                   </a>
+                  <span class="text-sm text-skin-muted font-normal ml-2">{area}</span>
                 </h3>
+                <time class="text-sm font-mono text-skin-muted text-right">
+                  {startYear} - {endYear}
+                </time>
               </header>
               <h4 class="text-md text-skin-muted font-mono">{area}</h4>
               {courses && (

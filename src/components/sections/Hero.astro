@@ -42,10 +42,15 @@ const { city, region } = location
           </div>
         </div>
 
-        {/* 2. Social Links */}
-        <div class="flex justify-between gap-2 rounded-3xl bg-skin-muted sm:bg-skin-button-muted p-3 border border-skin-muted/20">
+        {/* 2. Social Links (Fixed: Separated into two distinct buttons) */}
+        <div class="flex gap-4">
             {basics.profiles.map(({network, url, icon, color}) => (
-                <a href={url} target="_blank" class="p-2 hover:bg-skin-button-accent/10 rounded-md transition-all group" aria-label={network}>
+                <a 
+                    href={url} 
+                    target="_blank" 
+                    class="flex-1 flex justify-center p-3 rounded-3xl bg-skin-muted sm:bg-skin-button-muted hover:bg-skin-button-accent/10 transition-all group border border-skin-muted/20" 
+                    aria-label={network}
+                >
                     <Icon name={icon} width={20} height={20} class="text-skin-muted group-hover:text-skin-accent transition-colors" />
                 </a>
             ))}

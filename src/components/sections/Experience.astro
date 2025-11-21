@@ -17,28 +17,29 @@ import { work } from "@cv";
               <time datetime={endDate} data-title={endDate}>{endYear}</time>
             </header>
             <div class="relative flex flex-col pb-6 print:pb-0 before:-ml-6 sm:col-span-10 before:w-px print:before:hidden before:absolute before:left-[-35px] before:block before:h-full before:bg-skin-muted/50">
-              <div class="flex flex-col sm:flex-row text-lg font-bold text-skin-base">
+              <div class="flex flex-col sm:flex-row justify-between items-baseline text-lg font-bold text-skin-base">
                 <h3 class="font-mono">
-                   {name}
+                   {name} — {position}
                 </h3>
-                <span class="mx-2 max-sm:hidden"> — </span>
-                <h4 class="font-mono text-skin-accent">{position}</h4>
+                <time class="font-mono text-sm text-skin-muted text-right max-sm:text-left">
+                  {startYear} - {endYear}
+                </time>
               </div>
-              
-              <a href={url} target="_blank" class="text-sm text-skin-muted hover:text-skin-accent transition-colors w-max mb-2">
-                {url}
-              </a>
 
-              <div class="relative flex flex-col gap-2 pb-4 text-skin-muted text-sm">
-                <p>{summary}</p>
-                {highlights && (
-                    <ul class="list-disc list-inside mt-2 space-y-1">
-                        {highlights.map(item => (
-                            <li>{item}</li>
-                        ))}
-                    </ul>
-                )}
-              </div>
+              <a href={url} target="_blank" class="text-sm text-skin-muted hover:text-skin-accent transition-colors w-max mb-2">
+                {url.replace('https://', '')}
+              </a>
+              
+              <p class="text-skin-muted text-sm">{summary}</p>
+
+              {/* Highlights List */}
+              {highlights && (
+                  <ul class="list-disc list-inside mt-2 space-y-1 text-sm text-skin-muted">
+                      {highlights.map(item => (
+                          <li>{item}</li>
+                      ))}
+                  </ul>
+              )}
             </div>
           </div>
         </li>

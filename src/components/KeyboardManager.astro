@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components'
-// REMOVED: import('...') line
+// CRITICAL: We remove all "import 'ninja-keys'" statements that cause the build error.
+// The package is now loaded globally via the CDN link in Layout.astro.
 ---
 
 <div id="ninja-keys-wrapper">
@@ -8,7 +9,7 @@ import { Icon } from 'astro-icon/components'
 </div>
 
 <script>
-  // Script runs AFTER the global ninja-keys script is loaded (via the new HTML tag)
+  // Access the element as a custom component
   const ninja = document.querySelector('ninja-keys') as any; 
 
   if (ninja) {
@@ -54,7 +55,7 @@ import { Icon } from 'astro-icon/components'
                         icon: 'mdi:file-pdf-box', 
                         handler: () => {
                             const link = document.createElement('a');
-                            link.href = '/cv.pdf'; 
+                            link.href = '/cv.pdf'; // Points to public/cv.pdf
                             link.download = 'Gabriel_Windlin_CV.pdf';
                             link.click();
                         }
@@ -65,13 +66,25 @@ import { Icon } from 'astro-icon/components'
   }
 
   // Open palette when the visible button is clicked (Listen for the button click)
+  // This logic is correct and relies on the global availability.
   window.addEventListener('open-palette', () => {
-      // Find the component, which should now exist because the import ran.
-      const ninja = document.querySelector('ninja-keys') as any;
-      if (ninja) {
-          // This ensures the action is processed correctly.
-          ninja.open();
-      }
+        const ninja = document.querySelector('ninja-keys') as any;
+        // The timeout is a necessary safeguard for client-side custom component loading
+        setTimeout(() => {
+          if (ninja) ninja.open();
+        }, 50); 
+  });
+
+  // Re-add the global key listener for Ctrl+K / Cmd+K
+  document.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        const ninja = document.querySelector('ninja-keys') as any;
+        // Use timeout here as well
+        setTimeout(() => {
+            if (ninja) ninja.open();
+        }, 50);
+    }
   });
 </script>
 
