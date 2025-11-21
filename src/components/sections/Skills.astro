@@ -1,24 +1,26 @@
 ---
-import Section from "../Section.astro";
 import { skills } from "@cv";
 ---
 
-<Section className={Astro.props.className}>
-  <ul class="flex flex-col gap-6">
-    {
-      skills.map(({ name, keywords }) => {
-        return (
-          <li>
-             <div class="flex flex-wrap gap-2">
-                {keywords.map((key) => (
-                    <span class="rounded-md bg-skin-button-muted px-2 py-1 text-sm font-mono text-skin-muted ring-1 ring-skin-muted/50 hover:text-skin-accent hover:ring-skin-accent transition-all cursor-default">
-                        {key}
-                    </span>
-                ))}
-             </div>
-          </li>
-        );
-      })
-    }
-  </ul>
-</Section>
+<ul class="flex flex-col gap-6">
+  {
+    skills.map(({ name, keywords }) => {
+      return (
+        <li>
+          {/* This renders the category title: Languages, DevOps, etc. */}
+          <h3 class="font-mono font-bold text-sm mb-2 text-skin-base">
+            {name}
+          </h3>
+           <div class="flex flex-wrap gap-2">
+              {/* This renders the individual tags */}
+              {keywords.map((key) => (
+                  <span class="text-xs px-2 py-1 bg-skin-button-muted/20 text-skin-muted font-mono ring-1 ring-skin-muted/50 hover:text-skin-accent hover:ring-skin-accent transition-all cursor-default">
+                      {key}
+                  </span>
+              ))}
+           </div>
+        </li>
+      );
+    })
+  }
+</ul>

@@ -4,43 +4,48 @@ import { work } from "@cv";
 ---
 
 <Section className={Astro.props.className}>
-  <ul class="flex flex-col">
-    {work.map(({ name, startDate, endDate, position, summary, highlights, url }) => {
+  <ul class="flex flex-col gap-6">
+    {work.map(({ name, position, summary, highlights, url, startDate, endDate }) => {
       const startYear = new Date(startDate).getFullYear();
       const endYear = endDate != null ? new Date(endDate).getFullYear() : "Present";
+      const yearRange = `${startYear} - ${endYear}`;
 
       return (
-        <li class="relative print:py-2">
-          <div class="group relative grid pb-1 transition-all print:grid-cols-1 print:gap-1 sm:grid-cols-12 sm:gap-8 md:gap-6 lg:hover:!opacity-100">
-            <header class="relative mt-1 text-xs font-semibold sm:col-span-12 sm:col-start-1 sm:text-right print:text-right">
-              <time datetime={startDate} data-title={startDate}>{startYear}</time> - 
-              <time datetime={endDate} data-title={endDate}>{endYear}</time>
+        <li class="relative">
+          <div class="flex flex-col gap-2 border-l-2 border-skin-muted/30 pl-4 py-2">
+            
+            {/* --- HEADER: Institution (Left) and Date (Right) --- */}
+            <header class="flex flex-col sm:flex-row justify-between items-baseline w-full">
+              
+              <h3 class="text-xl font-mono font-bold text-skin-base mb-1 sm:mb-0">
+                {name} — {position}
+              </h3>
+              
+              <time class="text-sm font-mono text-skin-muted text-right">
+                {yearRange}
+              </time>
+              
             </header>
-            <div class="relative flex flex-col pb-6 print:pb-0 before:-ml-6 sm:col-span-10 before:w-px print:before:hidden before:absolute before:left-[-35px] before:block before:h-full before:bg-skin-muted/50">
-              <div class="flex flex-col sm:flex-row justify-between items-baseline text-lg font-bold text-skin-base">
-                <h3 class="font-mono">
-                   {name} — {position}
-                </h3>
-                <time class="font-mono text-sm text-skin-muted text-right max-sm:text-left">
-                  {startYear} - {endYear}
-                </time>
-              </div>
-
-              <a href={url} target="_blank" class="text-sm text-skin-muted hover:text-skin-accent transition-colors w-max mb-2">
+            
+            {/* --- CONTENT --- */}
+            
+            {url && (
+              <a href={url} target="_blank" class="text-sm text-skin-muted hover:text-skin-accent transition-colors w-max">
                 {url.replace('https://', '')}
               </a>
-              
-              <p class="text-skin-muted text-sm">{summary}</p>
+            )}
 
-              {/* Highlights List */}
-              {highlights && (
-                  <ul class="list-disc list-inside mt-2 space-y-1 text-sm text-skin-muted">
-                      {highlights.map(item => (
-                          <li>{item}</li>
-                      ))}
-                  </ul>
-              )}
-            </div>
+            <p class="text-sm text-skin-muted">{summary}</p>
+
+            {/* Highlights List */}
+            {highlights && (
+                <ul class="list-disc list-inside mt-2 space-y-1 text-sm text-skin-muted">
+                    {highlights.map(item => (
+                        <li class="pl-2">{item}</li>
+                    ))}
+                </ul>
+            )}
+            
           </div>
         </li>
       );
