@@ -1,103 +1,83 @@
 ---
-import Layout from '@layouts/Neovim.astro';
-import { basics } from '@cv'
-import { work } from '@cv'
-import {Icon} from "astro-icon/components";
+import Layout from '../../layouts/Neovim.astro';
+import { basics, work, education, skills } from "@cv";
 
-
-const { name, label, location, profiles, summary } = basics
-const { city, region, address } = location
+const { name, summary } = basics;
+const { city, region } = basics.location;
 ---
 
-<Layout title="About">
-  <div class="flex flex-col items-center justify-center h-full mt-[8%]">
-    <h1 class="text-4xl font-bold mb-2 text-blue nvim-line">About</h1>
-    <div class="text-center w-1/2 h-full">
-      <div class="mb-4 flex place-content-center">
-        <p class="nvim-line max-w-max text-xs nvim-line">version 0.0.1</p>
-      </div>
-      <div class="flex flex-col text-left justify-left p-10 prose-invert min-h-max">
-        <span class="text-xs text-skin-muted nvim-line">[me].jpg</span>
-        <h1 class="text-2xl nvim-line">{name}</h1>
-        <h2 class="text-sm text-green nvim-line">{label}</h2>
-        <div class="flex items
-        -center gap-2 pt-1 text-sm text-skin-muted nvim-line">
-          {address}, {city}, {region}.
-        </div>
-        
-        <div class="mb-2">
-          <p class="font-mono opacity-75 font-semibold nvim-line">
-            {summary}
-          </p>
-        </div>
-        
-        <footer class='flex flex-col gap-1'>
-          {
-            profiles.map(({ network, url}) => {
-              return (
-                <a
-                  href={url}
-                  data-href={url}
-                  title={`Visit ${name} profile on ${network}`}
-                  aria-label={`Visit ${name} profile on ${network}`}
-                  target='_blank'
-                  class='group nvim-line'
-                  rel='noopener noreferrer'>
-                  <Icon name="ri:arrow-right-s-line" width="18" height="18" class="text-blue group-hover:text-skin-hue transition ease-linear group-hover:translate-x-2 inline"></Icon>
-                  <span >〔{network}〕</span>
-                </a>
-              )
-            })
-          }
-        </footer>
-        
-        <span class="mb-2">---------------------------------------------------</span>
-        
-        <div class="min-h-max">
-          {
-            work && work.map(({ name, location, location_type, summary, responsibilities,  }) => {
-              return (
-                <div class="mb-4">
-                  <h3 class="text-lg font-bold text-blue nvim-line">{name}</h3>
-                  {(location || location_type) && (
-                    <div class="text-xs text-skin-muted nvim-line">
-                      {location} {location && location_type && '-'} {location_type}
-                    </div>
-                  )}
-                  <div class="mt-4 flex flex-col gap-4 text-sm">
-                    {summary && (
-                      <div class="flex flex-col gap-2">
-                        <h4 class="text-green nvim-line">Summary:</h4>
-                        <ul class="text-skin-muted [&>li]:ml-4 flex list-decimal flex-col gap-2">
-                          {Array.isArray(summary) ? (
-                            summary.map(item => (
-                              <li class="nvim-line">{item}</li>
-                            ))
-                          ) : (
-                            <li class="nvim-line">{summary}</li>
-                          )}
-                        </ul>
-                      </div>
-                    )}
-                    
-                    { responsibilities &&  (
-                        <div class="flex flex-col gap-2">
-                          <h4 class="text-green nvim-line">Responsibilities:</h4>
-                          <ul class="text-skin-muted [&>li]:ml-4 flex flex-col gap-2 list-decimal">
-                            {responsibilities.map(responsibility => (
-                              <li class="nvim-line">{responsibility}</li>
-                            ))}
-                          </ul>
+<Layout title={`About - ${name}`}>
+    <div class="flex flex-col gap-8 text-skin-base">
+        {/* Header Section */}
+        <section class="border-b border-skin-muted/50 pb-6">
+            <h1 class="text-2xl font-bold text-skin-accent mb-2"># About Me</h1>
+            <p class="text-skin-muted leading-relaxed max-w-3xl">
+                {summary}
+            </p>
+            <div class="mt-4 text-sm text-skin-muted font-mono">
+                <span class="text-skin-accent">Location:</span> {city}, {region}
+            </div>
+        </section>
+
+        {/* Experience Section */}
+        <section>
+            <h2 class="text-xl font-bold text-skin-accent mb-4">## Experience</h2>
+            <div class="flex flex-col gap-6">
+                {work.map(({ name, position, startDate, endDate, summary, highlights }) => (
+                    <div class="pl-4 border-l-2 border-skin-muted/30">
+                        <div class="flex justify-between items-baseline mb-1">
+                            <h3 class="font-bold text-lg">{name}</h3>
+                            <span class="text-sm text-skin-muted font-mono">
+                                {new Date(startDate).getFullYear()} - {endDate ? new Date(endDate).getFullYear() : 'Present'}
+                            </span>
                         </div>
-                      )}
-                  </div>
-                </div>
-              )
-            })
-          }
-        </div>
-        
-      </div>
+                        <div class="text-skin-accent mb-2 font-mono text-sm">{position}</div>
+                        <p class="text-sm text-skin-muted mb-2">{summary}</p>
+                        <ul class="list-disc list-inside text-sm text-skin-muted">
+                            {highlights.map(highlight => (
+                                <li>{highlight}</li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
+            </div>
+        </section>
+
+        {/* Education Section */}
+        <section>
+            <h2 class="text-xl font-bold text-skin-accent mb-4">## Education</h2>
+            <div class="grid gap-4">
+                {education.map(({ institution, area, startDate, endDate }) => (
+                    <div class="bg-skin-button-muted/20 p-4 rounded border border-skin-muted/20">
+                        <div class="flex justify-between">
+                            <span class="font-bold">{institution}</span>
+                            <span class="text-sm font-mono text-skin-muted">
+                                {new Date(startDate).getFullYear()} - {new Date(endDate).getFullYear()}
+                            </span>
+                        </div>
+                        <div class="text-sm text-skin-accent mt-1">{area}</div>
+                    </div>
+                ))}
+            </div>
+        </section>
+
+        {/* Skills Section */}
+        <section>
+            <h2 class="text-xl font-bold text-skin-accent mb-4">## Skills</h2>
+            <div class="flex flex-wrap gap-6">
+                {skills.map(({ name, keywords }) => (
+                    <div>
+                        <h3 class="text-sm font-bold text-skin-muted mb-2 font-mono">[{name}]</h3>
+                        <div class="flex flex-wrap gap-2">
+                            {keywords.map(key => (
+                                <span class="text-xs px-2 py-1 bg-skin-button-accent/10 text-skin-accent rounded border border-skin-button-accent/20">
+                                    {key}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
     </div>
-  </div>
 </Layout>
