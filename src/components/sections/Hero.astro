@@ -4,7 +4,6 @@ import Section from '@/components/Section.astro'
 import { Icon } from 'astro-icon/components'
 import Skills from './Skills.astro' 
 
-// Note: Added 'summary' to destructuring here
 const { name, label, image, location, email, summary } = basics
 const { city, region } = location
 ---
@@ -15,12 +14,12 @@ const { city, region } = location
     {/* --- LEFT COLUMN (The Sidebar) --- */}
     <div class="flex flex-col gap-4 md:w-[320px] shrink-0 md:sticky md:top-8 h-fit">
         
-        {/* 1. Profile Card */}
-        <div class="flex flex-col gap-4 rounded-3xl bg-skin-muted sm:bg-skin-button-muted p-5 border border-skin-muted/20 shadow-lg shadow-skin-hue/5">
+        {/* 1. Profile Card (Removed shadows and grayscale hover) */}
+        <div class="flex flex-col gap-4 rounded-3xl bg-skin-muted sm:bg-skin-button-muted p-5 border border-skin-muted/20">
           <div class="flex items-center gap-4">
             <figure class='print:hidden shrink-0'>
               <img
-                class='aspect-square w-24 rounded-2xl bg-cover grayscale hover:grayscale-0 transition-all duration-500'
+                class='aspect-square w-24 rounded-2xl bg-cover'
                 src={image}
                 alt={`Profile of ${name}`}
                 loading='eager' />
@@ -31,7 +30,6 @@ const { city, region } = location
             </div>
           </div>
           
-          {/* NEW: Summary Text Insertion */}
           <p class="text-xs text-skin-muted mt-3 border-t border-skin-muted/30 pt-3">
               {summary}
           </p>
