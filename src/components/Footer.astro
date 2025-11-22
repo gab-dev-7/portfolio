@@ -4,12 +4,17 @@ const year = new Date().getFullYear();
 
 <footer class="footer">
   <div class="container">
-    <div class="links">
-      <a href="/blog">Blog</a>
-      <a href="https://github.com/gab-dev-7/gab-dev-7.github.io" target="_blank" rel="noopener noreferrer">Source</a>
+    <div class="main-content">
+      <div class="links">
+        <a href="/blog">Blog</a>
+        <a href="https://github.com/gab-dev-7/gab-dev-7.github.io" target="_blank" rel="noopener noreferrer">Source</a>
+      </div>
+      <div class="copy">
+        &copy; {year} Gabriel Windlin. All rights reserved.
+      </div>
     </div>
-    <div class="copy">
-      &copy; {year} Gabriel Windlin. All rights reserved.
+    <div class="hint">
+      like nvim? press 'v'.
     </div>
   </div>
 </footer>
@@ -20,25 +25,34 @@ const year = new Date().getFullYear();
     text-align: center;
     border-top: 1px solid var(--color-border);
     margin-top: 4rem;
+    color: var(--text-muted);
   }
   .container {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 2rem;
-  }
-  .links {
-    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .links a {
-    margin: 0 1rem;
+    margin: 0 0.5rem;
     color: var(--text-muted);
     transition: color 0.3s;
   }
   .links a:hover {
     color: var(--accent-cyan);
   }
+  .main-content {
+    text-align: left;
+  }
   .copy {
-    color: var(--text-muted);
     font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  .hint {
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    opacity: 0.5;
   }
 </style>

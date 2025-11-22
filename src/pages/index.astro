@@ -15,7 +15,7 @@ const { name, label, summary, image, profiles } = basics;
       <img src={image} alt={name} class="profile-picture" />
       <h1>{name}</h1>
       <p class="subtitle">{label}</p>
-<nav>
+      <nav>
         <div class="icon-row">
           <a href={profiles.find(p => p.network === 'GitHub')?.url} class="btn icon-btn" target="_blank" rel="noopener noreferrer">
             <Icon name="github" />
@@ -31,9 +31,80 @@ const { name, label, summary, image, profiles } = basics;
     </header>
 
     <main>
-...
+      <section id="about">
+        <h2>About</h2>
+        <p>{summary}</p>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <Projects />
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <Experience />
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <Education />
+      </section>
+    </main>
+  </div>
+</Layout>
+
 <style>
-...
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  header {
+    text-align: center;
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--color-border);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-pink);
+    margin: 0 auto 1.5rem;
+    display: block;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    font-family: var(--font-mono);
+  }
+
+  h2 {
+    color: var(--text-main);
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent-pink);
+    display: inline-block;
+  }
+
+  section {
+    margin-bottom: 4rem;
+  }
+
   nav {
     display: flex;
     justify-content: center;
