@@ -3,6 +3,7 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import '../globals.css?v=20251121_Final'; // Added unique query param
 import CV from "@cv";
 import Analytics from '@vercel/analytics/astro';
+import Footer from '../components/Footer.astro';
 
 interface Props {
   title: string;
@@ -47,11 +48,8 @@ const structuredData = {
     <Analytics />
   </head>
   <body class="relative bg-skin-fill font-sans !cursor-auto overflow-x-hidden selection:bg-skin-accent selection:text-skin-inverted">
-    
-    <div class="fixed inset-0 -z-10 h-full w-full bg-skin-fill bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-    <div class="fixed inset-0 -z-10 h-full w-full bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(0,242,255,0.15),rgba(255,255,255,0))]"></div>
-
     <slot />
+    <Footer />
     
     <script src="../scripts/main.ts"></script>
     
@@ -123,7 +121,6 @@ const structuredData = {
   }
   a:hover {
     color: var(--accent-pink);
-    text-shadow: 0 0 8px var(--accent-pink);
   }
   h1, h2, h3, h4 { @apply text-skin-base font-sans; margin: 0; }
   p { @apply text-sm text-skin-muted; line-height: 1.6; }
