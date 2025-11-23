@@ -1,52 +1,48 @@
-# Portfolio.dev
+# ⚙️ (Neovim Inspired) Portfolio Website  
 
-This is a personal portfolio website built with Astro, TypeScript, and Tailwind CSS. It features a unique Neovim-inspired theme and includes sections for About, Experience, Education, Skills, and Projects.
+<div align="center">
+  <img src="https://img.shields.io/badge/Astro-0C111C?logo=astro&logoColor=white" alt="Astro">
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
+</div>
 
-## Features
+---
 
-*   **Neovim-inspired theme:** A unique theme that mimics the look and feel of the Neovim editor.
-*   **Multiple Sections:** Includes sections for About, Experience, Education, Skills, and Projects.
-*   **Responsive Design:** The website is designed to be responsive and work on all devices.
-*   **Live CV:** The portfolio data is sourced from a `cv.json` file, making it easy to update.
+## 👋 About Me
 
-## Tech Stack
+I'm Gabriel Windlin, a passionate Computer Science student with a keen interest in software development, cyber security, artificial intelligence, and solving complex problems.  This portfolio showcases my journey, skills, and projects.
 
-*   **Astro:** The web framework for building the website.
-*   **TypeScript:** For type safety and improved developer experience.
-*   **Tailwind CSS:** For styling the website.
-*   **React:** Used for some interactive components.
-*   **Vercel:** For deployment.
+---
 
-## Getting Started
+## ✨ Features
 
-To get a local copy up and running, follow these simple steps.
+<div align="center">
+  
+| Feature | Description |
+|---------|-------------|
+| **⌨️ Neovim Theme** | A sleek, terminal-inspired interface that mimics the Neovim editor experience |
+| **📱 Fully Responsive** | Perfectly adapts to all screen sizes - desktop, tablet, and mobile | 
+| **📊 Live CV Integration** | Portfolio data dynamically sourced from `cv.json` for easy updates |
+| **⚡ Blazing Fast** | Built with Astro for optimal performance and SEO | 
 
-### Prerequisites
+</div>
 
-*   Node.js (v22.x or later)
-*   npm
+---
 
-### Installation
 
-1.  Clone the repo
-    ```sh
-    git clone https://github.com/Anmol-TheDev/potfolio2.0
-    ```
-2.  Install NPM packages
-    ```sh
-    pnpm install
-    ```
 
-### Running the Development Server
+<div align="center">
+  <a href="https://github.com/gab-dev-7">
+    <img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white" alt="GitHub">
+  </a>
+  <a href="https://linkedin.com/in/gabriel-windlin">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+  <a href="mailto:gawindlin@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white" alt="Email">
+  </a>
+</div>
 
-To run the development server, use the following command:
+---
 
-```sh
-pnpm run dev
-```
-
-This will start the development server at `http://localhost:4321`.
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
+> **💡 Pro Tip**: Press `?` on the live site to see available keyboard shortcuts that enhance the Neovim-like experience!
