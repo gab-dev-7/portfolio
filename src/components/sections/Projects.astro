@@ -8,7 +8,7 @@ import { Icon } from "astro-icon/components";
     projects.map(({ url, description, highlights, name, github }) => {
       return (
         <div class="card">
-          <a href={`/projects/${name.toLowerCase().replace(/ /g, "-")}`}>
+          <a href={url} target={url.startsWith('http') ? '_blank' : '_self'} rel={url.startsWith('http') ? 'noopener noreferrer' : ''}>
             <header class="flex items-center justify-between">
               <h3 class="flex items-center gap-2">
                 {name}

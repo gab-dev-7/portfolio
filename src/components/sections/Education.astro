@@ -6,8 +6,13 @@ import { education } from "@cv";
   {
     education.map(({ institution, area, startDate, endDate, courses }) => {
       const startYear = new Date(startDate).getFullYear();
-      const endYear = endDate != null ? new Date(endDate).getFullYear() : "Present";
-      const yearRange = `${startYear} - ${endYear}`;
+      let yearRange;
+      if (institution === "ETH Zürich") {
+        yearRange = `expected graduation in ${new Date(endDate).getFullYear()}`;
+      } else {
+        const endYear = endDate != null ? new Date(endDate).getFullYear() : "Present";
+        yearRange = `${startYear} - ${endYear}`;
+      }
 
       return (
         <div class="card">

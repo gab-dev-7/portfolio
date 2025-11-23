@@ -40,6 +40,7 @@ const structuredData = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={detailedDescription} />
+    <meta name="keywords" content={keywords.join(", ")} />
     <meta name="theme-color" content="#050a14" />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
@@ -102,20 +103,6 @@ const structuredData = {
         if (e.key === 'v') {
           window.location.href = '/neovim';
         }
-      });
-
-      // 3. Scroll Animations
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      });
-
-      const sections = document.querySelectorAll('section');
-      sections.forEach((section) => {
-        observer.observe(section);
       });
     </script>
   </body>

@@ -23,6 +23,9 @@ const { name, label, summary, image, profiles } = basics;
           <a href={profiles.find(p => p.network === 'LinkedIn')?.url} class="btn icon-btn" target="_blank" rel="noopener noreferrer">
             <Icon name="linkedin" />
           </a>
+          <a href="/cv.pdf" class="btn icon-btn" download>
+            <Icon name="mdi:download" />
+          </a>
           <a href={`mailto:${profiles.find(p => p.network === 'Email')?.url}`} class="btn icon-btn">
             <Icon name="mail" />
           </a>

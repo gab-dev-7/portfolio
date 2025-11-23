@@ -111,3 +111,23 @@ document.addEventListener('ninjakeys-matrix', () => {
     matrixActive = true;
   }
 });
+
+import { decryptAnimation } from './animations';
+
+// 3. Scroll Animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      const h2 = entry.target.querySelector('h2');
+      if (h2) {
+        decryptAnimation(h2);
+      }
+    }
+  });
+});
+
+const sections = document.querySelectorAll('section');
+sections.forEach((section) => {
+  observer.observe(section);
+});

@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Gabriel Windlin",
-    "label": "Security Engineer & CS Student",
+    "label": "CS Student and Tech enthusiast",
     "image": "/bild.png",
     "email": "gawindlin@gmail.com",
     "phone": "+41 79 866 7358",
     "url": "https://gawindlin.com",
-    "summary": "Computer Science student at ETH Zürich with a focus on Systems and Security. I have practical experience maintaining on-premise Kubernetes clusters and developing offensive security tools in C and Python.",
+    "summary": "Computer Science student at ETH Zürich. I'm most interested in Cyber Security, Machine Learning, Software Development and Architecture. I am always open to collaborating on interesting projects or discussing new ideas in tech. Feel free to connect!",
     "theme": "dark",
     "location": {
       "city": "Zürich",
@@ -37,7 +37,7 @@
       "url": "https://vis.ethz.ch",
       "startDate": "2025-10-01",
       "endDate": null,
-      "summary": "Managing the computer infrastructure for the Computer Science Student Association.",
+      "summary": "Deploying Applications and helping to manage the VIS clusters.",
       "highlights": [
         "Deployed 'Rallly' on the association's local cluster using Kubernetes.",
         "Configured container orchestration and networking for self-hosted student services.",
@@ -82,7 +82,7 @@
         "Algorithms & Data Structures",
         "Linear Algebra",
         "Discrete Mathematics",
-        "Systems Programming"
+        "Java Programming"
       ]
     }
   ],
@@ -105,7 +105,19 @@
   ],
   "projects": [
     {
-      "name": "TCP Port Scanner",
+      "name": "sec-suite",
+      "isActive": true,
+      "description": "Comprehensive security testing toolkit for password auditing and network analysis.",
+      "highlights": [
+        "Advanced password cracking (Markov, Dictionary).",
+        "Multi-threaded brute force engine.",
+        "Modern hash support (bcrypt, argon2) & keylogger."
+      ],
+      "url": "https://cli.gawindlin.com/sec-suite/",
+      "github": "https://github.com/gab-dev-7/sec-suite"
+    },
+    {
+      "name": "port-scanner",
       "isActive": true,
       "description": "High-performance, single-file TCP scanner written in C using non-blocking I/O.",
       "highlights": [
@@ -113,23 +125,11 @@
         "Implements EINPROGRESS handling for robust async connections.",
         "Zero external dependencies."
       ],
-      "url": "https://github.com/gab-dev-7/port-scanner",
+      "url": "https://cli.gawindlin.com/port-scanner/",
       "github": "https://github.com/gab-dev-7/port-scanner"
     },
     {
-      "name": "SEC-SUITE",
-      "isActive": true,
-      "description": "Comprehensive security testing toolkit for password auditing and network analysis.",
-      "highlights": [
-        "Password cracking via Markov Chain & Dictionary attacks.",
-        "Multi-threaded brute force engine.",
-        "Includes modern hash support (bcrypt, argon2) and Keylogger utilities."
-      ],
-      "url": "https://github.com/gab-dev-7/sec-suite",
-      "github": "https://github.com/gab-dev-7/sec-suite"
-    },
-    {
-      "name": "MatrixCalculator",
+      "name": "matrix-calculator",
       "isActive": false,
       "description": "A Java-based tool for performing complex matrix operations.",
       "highlights": [
@@ -137,7 +137,7 @@
         "Built with pure Java.",
         "Currently being refactored for deployment."
       ],
-      "url": "https://github.com/gab-dev-7/MatrixCalculator",
+      "url": "/under-construction",
       "github": "https://github.com/gab-dev-7/MatrixCalculator"
     },
     {
@@ -149,11 +149,23 @@
         "Automated installation scripts.",
         "Documentation site available."
       ],
-      "url": "https://github.com/gab-dev-7/dotfiles",
+      "url": "https://dotfiles.gawindlin.com/",
       "github": "https://github.com/gab-dev-7/dotfiles"
     },
     {
-      "name": "FlowState",
+      "name": "chat-app",
+      "isActive": true,
+      "description": "A basic, single-connection TCP chat application implemented in C that demonstrates fundamental socket programming concepts.",
+      "highlights": [
+        "Implemented in C with POSIX sockets.",
+        "Demonstrates fundamental TCP/IP concepts.",
+        "Single-server, single-client architecture."
+      ],
+      "url": "https://cli.gawindlin.com/chat-app/",
+      "github": "https://github.com/gab-dev-7/chat-app"
+    },
+    {
+      "name": "flowstate",
       "isActive": false,
       "description": "A productivity tool designed to help maintain focus and workflow efficiency.",
       "highlights": [
@@ -161,7 +173,7 @@
         "Under active development.",
         "Upcoming deployment."
       ],
-      "url": "https://github.com/gab-dev-7/FlowState",
+      "url": "/under-construction",
       "github": "https://github.com/gab-dev-7/FlowState"
     },
     {
@@ -173,7 +185,7 @@
         "Generates dynamic visual patterns.",
         "Deployment coming later this week."
       ],
-      "url": "https://github.com/gab-dev-7/screen-savor",
+      "url": "/under-construction",
       "github": "https://github.com/gab-dev-7/screen-savor"
     }
   ]
