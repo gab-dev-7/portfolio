@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    /* --- DOTFILES PALETTE --- */
+    /* --- DARK MODE PALETTE --- */
     --bg-color: #050a14;
     --card-bg: #0f1724;
     --text-main: #e0e6ed;
@@ -12,7 +12,6 @@
     --accent-pink: #ff0055;
     --accent-cyan: #00f0ff;
 
-    /* --- YOUR CUSTOM PALETTE --- */
     --color-fill: var(--bg-color);
     --color-card: var(--card-bg);
     --color-button-muted: var(--card-bg);
@@ -47,7 +46,6 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-pink);
 }
-
 
 /* --- CURSOR & ELEMENT RESET --- */
 * {

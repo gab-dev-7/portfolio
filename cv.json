@@ -165,6 +165,18 @@
       "github": "https://github.com/gab-dev-7/chat-app"
     },
     {
+      "name": "screen-savor",
+      "isActive": true,
+      "description": "A captivating web experiment that transforms your browser into a canvas for generative art.",
+      "highlights": [
+        "Browse the latest trending and top-rated movies.",
+        "Search for any film and preview its trailers.",
+        "Built with React, JS, CSS and HTML for a smooth experience."
+      ],
+      "url": "https://screen-savor.gawindlin.com/",
+      "github": "https://github.com/gab-dev-7/screen-savor"
+    },
+    {
       "name": "flowstate",
       "isActive": false,
       "description": "A productivity tool designed to help maintain focus and workflow efficiency.",
@@ -175,18 +187,6 @@
       ],
       "url": "/under-construction",
       "github": "https://github.com/gab-dev-7/FlowState"
-    },
-    {
-      "name": "screen-savor",
-      "isActive": false,
-      "description": "A visual web experiment creating generative screensaver art.",
-      "highlights": [
-        "Built with JavaScript and HTML5 Canvas.",
-        "Generates dynamic visual patterns.",
-        "Deployment coming later this week."
-      ],
-      "url": "/under-construction",
-      "github": "https://github.com/gab-dev-7/screen-savor"
     }
   ]
 }

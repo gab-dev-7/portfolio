@@ -71,14 +71,11 @@ const structuredData = {
     <script is:inline>
       // 1. Initialize Theme
       const getTheme = () => {
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-          return localStorage.getItem('theme');
-        }
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        return 'dark'; // Always return dark
       };
       
       const setTheme = (theme) => {
-        if (theme === 'light') {
+        if (theme === 'light') { // This branch will technically never be hit now
           document.documentElement.classList.remove('dark');
           document.documentElement.classList.add('light');
         } else {
@@ -91,12 +88,12 @@ const structuredData = {
       // Apply on load
       setTheme(getTheme());
 
-      // 2. Listen for Toggle Event from Command Palette
-      window.addEventListener('theme-toggle', () => {
-        const current = getTheme();
-        const next = current === 'dark' ? 'light' : 'dark';
-        setTheme(next);
-      });
+      // 2. Removed Listen for Toggle Event as theme is fixed to dark
+      // window.addEventListener('theme-toggle', () => {
+      //   const current = getTheme();
+      //   const next = current === 'dark' ? 'light' : 'dark';
+      //   setTheme(next);
+      // });
 
       // 4. Neovim Mode Shortcut
       window.addEventListener('keydown', (e) => {
