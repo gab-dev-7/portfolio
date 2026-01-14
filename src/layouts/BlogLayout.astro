@@ -6,14 +6,18 @@ const { frontmatter } = Astro.props;
 <Layout title={frontmatter.title}>
   <div class="container">
     <header>
+      <div class="meta">
+        <time datetime={frontmatter.publishDate.toISOString()}>
+          {frontmatter.publishDate.toDateString()}
+        </time>
+        </div>
+      
       <h1>{frontmatter.title}</h1>
       <p class="subtitle">{frontmatter.description}</p>
-      <time datetime={frontmatter.publishDate.toISOString()}>
-        {frontmatter.publishDate.toDateString()}
-      </time>
     </header>
+    
     <main>
-      <article>
+      <article class="content">
         <slot />
       </article>
     </main>
@@ -22,48 +26,131 @@ const { frontmatter } = Astro.props;
 
 <style>
   .container {
-    max-width: 900px;
+    max-width: 720px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0 1.5rem 4rem 1.5rem;
   }
 
   header {
-    text-align: center;
-    padding: 4rem 0;
-    border-bottom: 1px solid #1e293b;
+    text-align: left;
+    padding: 4rem 0 3rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 3rem;
+  }
+
+  .meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-mono, monospace);
+    font-size: 0.875rem;
+    color: var(--accent-cyan);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
   h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     line-height: 1.1;
-    background: linear-gradient(
-      to right,
-      var(--accent-cyan),
-      var(--accent-pink)
-    );
-    -webkit-background-clip: text;
-    color: transparent;
-    margin-bottom: 0.5rem;
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.02em;
+    color: white;
   }
 
   .subtitle {
-    color: var(--text-muted);
     font-size: 1.25rem;
-    font-family: var(--font-mono);
-  }
-
-  time {
-    color: var(--text-muted);
-    font-size: 0.875rem;
-    margin-top: 1rem;
-    display: block;
-  }
-
-  main {
-    padding: 2rem 0;
+    line-height: 1.6;
+    color: #94a3b8;
+    font-weight: 400;
   }
 
   article {
-    prose-invert: true;
+    color: #e2e8f0;
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+
+  article :global(h2) {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+    letter-spacing: -0.01em;
+  }
+
+  article :global(h3) {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: var(--accent-cyan);
+  }
+
+  article :global(p) {
+    margin-bottom: 1.5rem;
+  }
+
+  article :global(a) {
+    color: var(--accent-pink);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+  
+  article :global(a:hover) {
+    border-bottom-color: var(--accent-pink);
+  }
+
+  article :global(ul), article :global(ol) {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  
+  article :global(li) {
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  article :global(blockquote) {
+    border-left: 4px solid var(--accent-pink);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #94a3b8;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 0 8px 8px 0;
+  }
+
+  article :global(pre) {
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #0f172a !important;
+    margin: 2rem 0;
+    overflow-x: auto;
+    font-size: 0.9rem;
+  }
+
+  article :global(code) {
+    font-family: var(--font-mono, monospace);
+    color: var(--accent-cyan);
+  }
+  
+  article :global(p code) {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  
+  article :global(img) {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 2rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 </style>

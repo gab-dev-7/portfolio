@@ -12,7 +12,13 @@ export default defineConfig({
   integrations: [tailwind(), icon(), sitemap()],
   output: "static",
 
-  // --- CRITICAL VITE/ROLLUP FIX ---
+  markdown: {
+    shikiConfig: {
+      theme: "catppuccin-mocha",
+      wrap: true,
+    },
+  },
+
   vite: {
     resolve: {
       alias: {
