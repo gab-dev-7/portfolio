@@ -105,6 +105,18 @@
   ],
   "projects": [
     {
+      "name": "Homelab",
+      "isActive": true,
+      "description": "Converged homelab infrastructure designed for reliability and resource efficiency.",
+      "highlights": [
+        "Microservices orchestration with Docker Compose and Caddy ingress.",
+        "Centralized PostgreSQL 16 and Redis clusters for resource optimization.",
+        "Automated workflows with Bash, Cron, and Split-Horizon DNS."
+      ],
+      "url": "#",
+      "github": ""
+    },
+    {
       "name": "sec-suite",
       "isActive": true,
       "description": "Comprehensive security testing toolkit for password auditing and network analysis.",
@@ -130,14 +142,14 @@
     },
     {
       "name": "matrix-calculator",
-      "isActive": false,
-      "description": "A Java-based tool for performing complex matrix operations.",
+      "isActive": true,
+      "description": "Built with Spring Boot for the backend and JavaScript for the frontend.",
       "highlights": [
         "Supports matrix addition, subtraction, and multiplication.",
-        "Built with pure Java.",
-        "Currently being refactored for deployment."
+        "Java Spring Boot Backend.",
+        "Interactive React Frontend."
       ],
-      "url": "/under-construction",
+      "url": "http://matrixcalc.gawindlin.com/",
       "github": "https://github.com/gab-dev-7/MatrixCalculator"
     },
     {
@@ -177,16 +189,28 @@
       "github": "https://github.com/gab-dev-7/screen-savor"
     },
     {
-      "name": "flowstate",
+      "name": "Upcoming Project",
       "isActive": false,
-      "description": "A productivity tool designed to help maintain focus and workflow efficiency.",
+      "description": "Something awesome is brewing in the lab. Check back soon for updates!",
       "highlights": [
-        "Workflow optimization features.",
-        "Under active development.",
-        "Upcoming deployment."
+        "Top Secret",
+        "Under Construction",
+        "Coming Soon"
       ],
-      "url": "/under-construction",
-      "github": "https://github.com/gab-dev-7/FlowState"
+      "url": "#",
+      "github": ""
+    },
+    {
+      "name": "Have an idea?",
+      "isActive": false,
+      "description": "I'm always open to new challenges and collaborations. Reach out!",
+      "highlights": [
+        "Collaboration",
+        "Innovation",
+        "Let's Build"
+      ],
+      "url": "mailto:gawindlin@gmail.com",
+      "github": ""
     }
   ]
 }
