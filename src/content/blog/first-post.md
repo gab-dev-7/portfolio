@@ -34,4 +34,4 @@ This blog won't just be about polished finish lines; it will be about the proces
 
 Whether you are a recruiter, a fellow student, or just someone who stumbled here via GitHub: welcome.
 
-Feel free to check out my code on [GitHub](https://github.com/gab-dev-7) or browse my [CV](/cv).
+Feel free to check out my code on [GitHub](https://github.com/gab-dev-7) or browse my [CV](/cv.pdf).
