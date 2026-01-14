@@ -10,12 +10,12 @@ const { frontmatter } = Astro.props;
         <time datetime={frontmatter.publishDate.toISOString()}>
           {frontmatter.publishDate.toDateString()}
         </time>
-        </div>
-      
+      </div>
+
       <h1>{frontmatter.title}</h1>
       <p class="subtitle">{frontmatter.description}</p>
     </header>
-    
+
     <main>
       <article class="content">
         <slot />
@@ -98,16 +98,17 @@ const { frontmatter } = Astro.props;
     border-bottom: 1px solid transparent;
     transition: border-color 0.2s ease;
   }
-  
+
   article :global(a:hover) {
     border-bottom-color: var(--accent-pink);
   }
 
-  article :global(ul), article :global(ol) {
+  article :global(ul),
+  article :global(ol) {
     margin-bottom: 1.5rem;
     padding-left: 1.5rem;
   }
-  
+
   article :global(li) {
     margin-bottom: 0.5rem;
     padding-left: 0.5rem;
@@ -138,14 +139,14 @@ const { frontmatter } = Astro.props;
     font-family: var(--font-mono, monospace);
     color: var(--accent-cyan);
   }
-  
+
   article :global(p code) {
     background: rgba(255, 255, 255, 0.1);
     padding: 0.2rem 0.4rem;
     border-radius: 4px;
     font-size: 0.9em;
   }
-  
+
   article :global(img) {
     max-width: 100%;
     height: auto;

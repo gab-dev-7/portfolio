@@ -3,7 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
 );
 ---
 
@@ -16,17 +16,19 @@ const posts = (await getCollection("blog")).sort(
 
     <main>
       <ul>
-        {posts.map((post) => (
-          <li>
-            <a href={`/blog/${post.slug}`}>
-              <h2>{post.data.title}</h2>
-              <p>{post.data.description}</p>
-              <time datetime={post.data.publishDate.toISOString()}>
-                {post.data.publishDate.toDateString()}
-              </time>
-            </a>
-          </li>
-        ))}
+        {
+          posts.map((post) => (
+            <li>
+              <a href={`/blog/${post.slug}`}>
+                <h2>{post.data.title}</h2>
+                <p>{post.data.description}</p>
+                <time datetime={post.data.publishDate.toISOString()}>
+                  {post.data.publishDate.toDateString()}
+                </time>
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </main>
   </div>
@@ -46,12 +48,12 @@ const posts = (await getCollection("blog")).sort(
   }
 
   h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
+    font-weight: 800;
     line-height: 1.1;
-    background: linear-gradient(to right, var(--accent-cyan), var(--accent-pink));
-    -webkit-background-clip: text;
-    color: transparent;
-    margin-bottom: 0.5rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
   }
 
   .subtitle {

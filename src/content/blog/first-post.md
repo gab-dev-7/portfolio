@@ -26,7 +26,7 @@ I'm not just a developer; I'm a systems enthusiast. I love the grit of low-level
 This blog won't just be about polished finish lines; it will be about the process. I plan to write about:
 
 - **Infrastructure & Homelab:** Documenting my setups, like the Kubernetes cluster I help manage for [VIS ETHZ](https://vis.ethz.ch) or my personal microservices architecture.
-- **Low-Level Learning:** Deep dives into C, POSIX sockets, and things I learned building tools like my [TCP Port Scanner](https://github.com/gab-dev-7/tcp-port-scanner).
+- **Low-Level Learning:** Deep dives into C, POSIX sockets, and things I learned building tools like my [TCP Port Scanner](https://github.com/gab-dev-7/port-scanner).
 - **Cybersecurity:** Write-ups on CTFs (Capture The Flags), security tools I'm building (like `sec-suite`), and vulnerabilities I'm studying.
 - **Uni Life:** The occasional proof from my studies at ETH that was too interesting (or painful) not to share.
 

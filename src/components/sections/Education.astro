@@ -10,7 +10,8 @@ import { education } from "@cv";
       if (institution === "ETH Zürich") {
         yearRange = `expected graduation in ${new Date(endDate).getFullYear()}`;
       } else {
-        const endYear = endDate != null ? new Date(endDate).getFullYear() : "Present";
+        const endYear =
+          endDate != null ? new Date(endDate).getFullYear() : "Present";
         yearRange = `${startYear} - ${endYear}`;
       }
 
@@ -46,7 +47,9 @@ import { education } from "@cv";
     padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid var(--color-border);
-    transition: transform 0.3s, border-color 0.3s;
+    transition:
+      transform 0.3s,
+      border-color 0.3s;
   }
 
   .card:hover {

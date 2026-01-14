@@ -8,11 +8,13 @@ import { Icon } from "astro-icon/components";
     projects.map(({ url, description, highlights, name, github }) => {
       return (
         <div class="card">
-          <a href={url} target={url.startsWith('http') ? '_blank' : '_self'} rel={url.startsWith('http') ? 'noopener noreferrer' : ''}>
+          <a
+            href={url}
+            target={url.startsWith("http") ? "_blank" : "_self"}
+            rel={url.startsWith("http") ? "noopener noreferrer" : ""}
+          >
             <header class="flex items-center justify-between">
-              <h3 class="flex items-center gap-2">
-                {name}
-              </h3>
+              <h3 class="flex items-center gap-2">{name}</h3>
               {github && (
                 <a
                   href={github}
@@ -50,7 +52,9 @@ import { Icon } from "astro-icon/components";
     padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid var(--color-border);
-    transition: transform 0.3s, border-color 0.3s;
+    transition:
+      transform 0.3s,
+      border-color 0.3s;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -60,7 +64,7 @@ import { Icon } from "astro-icon/components";
     transform: translateY(-5px);
     border-color: var(--accent-cyan);
   }
-  
+
   .card h3 {
     margin-top: 0;
     color: var(--accent-cyan);
@@ -86,4 +90,3 @@ import { Icon } from "astro-icon/components";
     border: 1px solid var(--color-border);
   }
 </style>
-

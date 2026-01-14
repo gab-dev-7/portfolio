@@ -47,7 +47,7 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/cloudflare": "^12.6.7",
     "daisyui": "^4.12.10",
-    "prettier": "^3.3.3",
+    "prettier": "^3.7.4",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.8",
     "rimraf": "^6.0.1",

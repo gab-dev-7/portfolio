@@ -1,41 +1,59 @@
 ---
-import Layout from '../../layouts/Neovim.astro';
+import Layout from "../../layouts/Neovim.astro";
 import { projects } from "@cv";
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components";
 ---
 
 <Layout title="Projects">
-    <div class="flex flex-col gap-6">
-        <h1 class="text-2xl text-skin-accent border-b border-skin-muted/50 pb-4"># Projects</h1>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {projects.map(({ name, description, url, highlights, isActive, github }) => (
-                <div class="group relative p-4 border border-skin-muted/30 rounded bg-skin-button-muted/10 hover:border-skin-accent transition-colors">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-lg text-skin-base group-hover:text-skin-accent transition-colors">
-                            <a href={url} target="_blank">{name}</a>
-                        </h3>
-                        <div class="flex gap-2">
-                             {isActive && <span class="text-xs bg-green-500/20 text-green-400 px-2 py-0.5 rounded font-mono">Active</span>}
-                             {github && (
-                                <a href={github} target="_blank" class="text-skin-muted hover:text-skin-accent">
-                                    <Icon name="github" width={20} height={20} />
-                                </a>
-                             )}
-                        </div>
-                    </div>
-                    
-                    <p class="text-sm text-skin-muted mb-4 leading-relaxed">
-                        {description}
-                    </p>
-                    
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        {highlights.map(tech => (
-                            <span class="text-xs font-mono text-skin-accent/80">#{tech}</span>
-                        ))}
-                    </div>
+  <div class="flex flex-col gap-6">
+    <h1 class="text-2xl text-skin-accent border-b border-skin-muted/50 pb-4">
+      # Projects
+    </h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {
+        projects.map(
+          ({ name, description, url, highlights, isActive, github }) => (
+            <div class="group relative p-4 border border-skin-muted/30 rounded bg-skin-button-muted/10 hover:border-skin-accent transition-colors">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-lg text-skin-base group-hover:text-skin-accent transition-colors">
+                  <a href={url} target="_blank">
+                    {name}
+                  </a>
+                </h3>
+                <div class="flex gap-2">
+                  {isActive && (
+                    <span class="text-xs bg-green-500/20 text-green-400 px-2 py-0.5 rounded font-mono">
+                      Active
+                    </span>
+                  )}
+                  {github && (
+                    <a
+                      href={github}
+                      target="_blank"
+                      class="text-skin-muted hover:text-skin-accent"
+                    >
+                      <Icon name="github" width={20} height={20} />
+                    </a>
+                  )}
                 </div>
-            ))}
-        </div>
+              </div>
+
+              <p class="text-sm text-skin-muted mb-4 leading-relaxed">
+                {description}
+              </p>
+
+              <div class="flex flex-wrap gap-2 mt-auto">
+                {highlights.map((tech) => (
+                  <span class="text-xs font-mono text-skin-accent/80">
+                    #{tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ),
+        )
+      }
     </div>
+  </div>
 </Layout>

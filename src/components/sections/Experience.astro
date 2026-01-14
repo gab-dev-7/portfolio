@@ -6,7 +6,8 @@ import { work } from "@cv";
   {
     work.map(({ name, position, summary, startDate, endDate, highlights }) => {
       const startYear = new Date(startDate).getFullYear();
-      const endYear = endDate != null ? new Date(endDate).getFullYear() : "Present";
+      const endYear =
+        endDate != null ? new Date(endDate).getFullYear() : "Present";
       const yearRange = `${startYear} - ${endYear}`;
 
       return (
@@ -42,7 +43,9 @@ import { work } from "@cv";
     padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid var(--color-border);
-    transition: transform 0.3s, border-color 0.3s;
+    transition:
+      transform 0.3s,
+      border-color 0.3s;
   }
 
   .card:hover {

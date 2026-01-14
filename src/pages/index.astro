@@ -17,16 +17,29 @@ const { name, label, summary, image, profiles } = basics;
       <p class="subtitle">{label}</p>
       <nav>
         <div class="icon-row">
-          <a href={profiles.find(p => p.network === 'GitHub')?.url} class="btn icon-btn" target="_blank" rel="noopener noreferrer">
+          <a
+            href={profiles.find((p) => p.network === "GitHub")?.url}
+            class="btn icon-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Icon name="github" />
           </a>
-          <a href={profiles.find(p => p.network === 'LinkedIn')?.url} class="btn icon-btn" target="_blank" rel="noopener noreferrer">
+          <a
+            href={profiles.find((p) => p.network === "LinkedIn")?.url}
+            class="btn icon-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Icon name="linkedin" />
           </a>
           <a href="/cv.pdf" class="btn icon-btn" download>
             <Icon name="mdi:download" />
           </a>
-          <a href={`mailto:${profiles.find(p => p.network === 'Email')?.url}`} class="btn icon-btn">
+          <a
+            href={`mailto:${profiles.find((p) => p.network === "Email")?.url}`}
+            class="btn icon-btn"
+          >
             <Icon name="mail" />
           </a>
         </div>
@@ -124,7 +137,7 @@ const { name, label, summary, image, profiles } = basics;
     justify-content: center;
     gap: 1.5rem;
   }
-  
+
   .btn {
     display: inline-flex;
     align-items: center;
