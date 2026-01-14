@@ -1,9 +1,9 @@
 ---
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
-import '../globals.css?v=20251121_Final'; // Added unique query param
+import "../globals.css?v=20251121_Final";
 import CV from "@cv";
-import Analytics from '@vercel/analytics/astro';
-import Footer from '../components/Footer.astro';
+import Analytics from "@vercel/analytics/astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
   title: string;
@@ -13,11 +13,11 @@ interface Props {
   keywords?: string[];
 }
 
-const { 
+const {
   title,
   image = CV.basics.image,
   canonicalURL = CV.basics.url,
-  keywords = [ "Gabriel Windlin", "Security", "Portfolio" ]
+  keywords = ["Gabriel Windlin", "Security", "Portfolio"],
 } = Astro.props;
 
 const { url, theme, name, location } = CV.basics;
@@ -26,10 +26,10 @@ const detailedDescription = `Gabriel Windlin - Security Engineer & Developer. Ex
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": name,
-  "url": url,
-  "image": image,
-  "description": detailedDescription,
+  name: name,
+  url: url,
+  image: image,
+  description: detailedDescription,
 };
 ---
 
@@ -43,62 +43,72 @@ const structuredData = {
     <meta name="keywords" content={keywords.join(", ")} />
     <meta name="theme-color" content="#050a14" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
-    <ninja-keys id="command-palette" class="dark"></ninja-keys>
-    <script type="module" src="https://unpkg.com/ninja-keys@1.2.2/dist/ninja-keys.js"></script>
-    <script is:inline type="application/ld+json">
-      [
-        {
-          "id": "Matrix",
-          "title": "Enter the Matrix",
-          "hotkey": "cmd+M",
-          "mdicon": "code",
-          "handler": () => {
-            document.dispatchEvent(new CustomEvent('ninjakeys-matrix'));
-          }
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ninja-keys@1.2.2/dist/ninja-keys.js"></script>
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", () => {
+        const ninja = document.querySelector("ninja-keys");
+        if (ninja) {
+          ninja.data = [
+            {
+              id: "Matrix",
+              title: "Enter the Matrix",
+              hotkey: "cmd+M",
+              mdicon: "code",
+              handler: () => {
+                document.dispatchEvent(new CustomEvent("ninjakeys-matrix"));
+              },
+            },
+          ];
         }
-      ]
+      });
     </script>
-    <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />
-    <Analytics />
+
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(structuredData)}
+    />
   </head>
-  <body class="relative bg-skin-fill font-sans !cursor-auto overflow-x-hidden selection:bg-skin-accent selection:text-skin-inverted">
+
+  <body
+    class="relative bg-skin-fill font-sans !cursor-auto overflow-x-hidden selection:bg-skin-accent selection:text-skin-inverted"
+  >
+    <ninja-keys id="command-palette" class="dark"></ninja-keys>
+    <Analytics />
+
     <slot />
     <Footer />
-    
+
     <script src="../scripts/main.ts"></script>
-    
+
     <script is:inline>
       // 1. Initialize Theme
       const getTheme = () => {
-        return 'dark'; // Always return dark
+        return "dark";
       };
-      
+
       const setTheme = (theme) => {
-        if (theme === 'light') { // This branch will technically never be hit now
-          document.documentElement.classList.remove('dark');
-          document.documentElement.classList.add('light');
+        if (theme === "light") {
+          document.documentElement.classList.remove("dark");
+          document.documentElement.classList.add("light");
         } else {
-          document.documentElement.classList.add('dark');
-          document.documentElement.classList.remove('light');
+          document.documentElement.classList.add("dark");
+          document.documentElement.classList.remove("light");
         }
-        localStorage.setItem('theme', theme);
+        localStorage.setItem("theme", theme);
       };
 
       // Apply on load
       setTheme(getTheme());
 
-      // 2. Removed Listen for Toggle Event as theme is fixed to dark
-      // window.addEventListener('theme-toggle', () => {
-      //   const current = getTheme();
-      //   const next = current === 'dark' ? 'light' : 'dark';
-      //   setTheme(next);
-      // });
-
       // 4. Neovim Mode Shortcut
-      window.addEventListener('keydown', (e) => {
-        if (e.key === 'v') {
-          window.location.href = '/neovim';
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "v") {
+          window.location.href = "/neovim";
         }
       });
     </script>
@@ -107,11 +117,11 @@ const structuredData = {
 
 <style>
   body {
-    /* Smooth scrolling for the whole page */
     scroll-behavior: smooth;
   }
-  /* Global reset for the new look */
-  * { @apply rounded-lg; }
+  * {
+    @apply rounded-lg;
+  }
   a {
     color: var(--text-muted);
     text-decoration: none;
@@ -122,11 +132,29 @@ const structuredData = {
     color: var(--text-main);
     border-bottom-color: var(--accent-cyan);
   }
-  h1, h2, h3, h4 { @apply text-skin-base font-sans; margin: 0; }
-  p { @apply text-sm text-skin-muted; line-height: 1.6; }
-  
-  ::-webkit-scrollbar { width: 6px; }
-  ::-webkit-scrollbar-track { background: transparent; }
-  ::-webkit-scrollbar-thumb { background: rgba(0, 242, 255, 0.2); border-radius: 3px; }
-  ::-webkit-scrollbar-thumb:hover { background: rgba(0, 242, 255, 0.5); }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-skin-base font-sans;
+    margin: 0;
+  }
+  p {
+    @apply text-sm text-skin-muted;
+    line-height: 1.6;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 242, 255, 0.2);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 242, 255, 0.5);
+  }
 </style>
