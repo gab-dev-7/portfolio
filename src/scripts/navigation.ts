@@ -96,17 +96,11 @@ function handleCommand(command: string) {
       case "proj":
         window.location.href = "/neovim/projects";
         break;
-      case "about":
-        window.location.href = "/neovim/about";
-        break;
       case "hi":
         window.location.href = "/neovim/contact";
         break;
       case "q":
         window.location.href = "/";
-        break;
-      case "h":
-        window.location.href = "/neovim/help";
         break;
       case "b":
         const keyBindings = document.getElementById("key-bindings");

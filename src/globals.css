@@ -4,30 +4,47 @@
 
 @layer base {
   :root {
-    /* --- DARK MODE PALETTE --- */
-    --bg-color: #050a14;
-    --card-bg: #0f1724;
-    --text-main: #e0e6ed;
-    --text-muted: #94a3b8;
-    --accent-pink: #ff0055;
-    --accent-cyan: #00f0ff;
+    /* --- DARK MODE PALETTE (RGB Channels) --- */
+    --bg-color-rgb: 5, 10, 20;       /* #050a14 */
+    --card-bg-rgb: 15, 23, 36;       /* #0f1724 */
+    --text-main-rgb: 224, 230, 237;  /* #e0e6ed */
+    --text-muted-rgb: 148, 163, 184; /* #94a3b8 */
+    --accent-pink-rgb: 255, 0, 85;   /* #ff0055 */
+    --accent-cyan-rgb: 0, 240, 255;  /* #00f0ff */
+    --button-hover-rgb: 212, 0, 71;  /* #d40047 */
+    --inverted-rgb: 255, 255, 255;   /* #ffffff */
+    --border-rgb: 30, 41, 59;        /* #1e293b */
 
-    --color-fill: var(--bg-color);
-    --color-card: var(--card-bg);
-    --color-button-muted: var(--card-bg);
-    --color-text-base: var(--text-main);
-    --color-text-muted: var(--text-muted);
-    --color-accent: var(--accent-cyan);
-    --color: var(--accent-cyan);
-    --color-button-accent: var(--accent-pink);
-    --color-button-accent-hover: #d40047; /* Slightly darker pink */
-    --color-text-inverted: #ffffff;
-    --color-border: #1e293b;
+    /* --- Base Variables (Usable as standard CSS colors) --- */
+    --bg-color: rgb(var(--bg-color-rgb));
+    --card-bg: rgb(var(--card-bg-rgb));
+    --text-main: rgb(var(--text-main-rgb));
+    --text-muted: rgb(var(--text-muted-rgb));
+    --accent-pink: rgb(var(--accent-pink-rgb));
+    --accent-cyan: rgb(var(--accent-cyan-rgb));
+    --color-border: rgb(var(--border-rgb));
+    
+    /* These are used only in Tailwind or as channels */
+    --color-button-accent-hover: var(--button-hover-rgb);
+    --color-text-inverted: var(--inverted-rgb);
+
+    /* --- Tailwind Mapping Variables (Must be RGB Channels) --- */
+    --color-fill: var(--bg-color-rgb);
+    --color-card: var(--card-bg-rgb);
+    --color-button-muted: var(--card-bg-rgb);
+    --color-text-base: var(--text-main-rgb);
+    --color-text-muted: var(--text-muted-rgb);
+    --color-accent: var(--accent-cyan-rgb);
+    --color: var(--accent-cyan-rgb);
+    --color-button-accent: var(--accent-pink-rgb);
+    
+    /* Missing variable required by Tailwind config */
+    --muted: var(--text-muted-rgb);
   }
 
   html {
-    background-color: var(--color-fill);
-    color: var(--color-text-base);
+    background-color: rgb(var(--color-fill));
+    color: rgb(var(--color-text-base));
     cursor: auto !important;
   }
 }
