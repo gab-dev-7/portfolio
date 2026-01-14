@@ -9,7 +9,7 @@ tags: ["intro", "personal", "linux", "eth-zurich"]
 
 Welcome to `gawindlin.com`. If you are reading this, you’ve found my corner of the internet.
 
-I built this site to serve as a digital archive—a place to document my work, my studies at ETH Zürich, and the projects that keep me up at night. While the site itself is built with Astro and styled to also function like my beloved Neovim, the content you'll find here going forward will likely dig much deeper than HTML and CSS.
+I built this site to serve as a digital archive, a place to document my work, my studies at ETH Zürich, and the projects that keep me up at night. While the site itself is built with Astro and styled to also function like my beloved Neovim, the content you'll find here going forward will likely dig much deeper than HTML and CSS.
 
 ## The "Aha" Moment
 
