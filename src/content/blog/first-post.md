@@ -1,7 +1,7 @@
 ---
 title: "Hello World: The Terminal is My Home"
 description: "Why I built this site, my shift from web-dev to low-level systems, and what to expect from my digital garden."
-publishDate: "2025-11-22"
+publishDate: "2026-01-14"
 tags: ["intro", "personal", "linux", "eth-zurich"]
 ---
 
