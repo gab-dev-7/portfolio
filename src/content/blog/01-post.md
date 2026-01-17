@@ -24,7 +24,7 @@ I use **Docker Compose** to orchestrate everything. The core philosophy is **Sha
 
 The proof is in the numbers. By sharing the database and cache, the efficiency is incredibly high.
 
-![htop screenshot of my surface pro running linux](./htop.jpg)
+![htop screenshot of my surface pro running linux](/htop.jpg)
 
 Here is a live snapshot of the memory usage:
 
