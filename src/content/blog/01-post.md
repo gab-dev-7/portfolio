@@ -1,7 +1,7 @@
 ---
 title: "My Homelab is a Surface Pro 9"
 description: "Running a converged microservices stack with Docker, Caddy, and CrowdSec on limited hardware."
-publishDate: "2026-01-28"
+publishDate: "2026-01-17"
 tags: ["homelab", "docker", "self-hosting", "infrastructure", "performance"]
 ---
 
