@@ -1,4 +1,4 @@
-# ⚙️ (Neovim Inspired) Portfolio Website  
+# (Neovim Inspired) Portfolio Website
 
 <div align="center">
   <img src="https://img.shields.io/badge/Astro-0C111C?logo=astro&logoColor=white" alt="Astro">
@@ -8,28 +8,26 @@
 
 ---
 
-## 👋 About Me
+## About Me
 
-I'm Gabriel Windlin, a passionate Computer Science student with a keen interest in software development, cyber security, artificial intelligence, and solving complex problems.  This portfolio showcases my journey, skills, and projects.
+I'm Gabriel Windlin, a passionate Computer Science student with a keen interest in software development, cyber security, artificial intelligence, and solving complex problems. This portfolio showcases my journey, skills, and projects.
 
 ---
 
-## ✨ Features
+## Features
 
 <div align="center">
   
 | Feature | Description |
 |---------|-------------|
-| **⌨️ Neovim Theme** | A sleek, terminal-inspired interface that mimics the Neovim editor experience |
-| **📱 Fully Responsive** | Perfectly adapts to all screen sizes - desktop, tablet, and mobile | 
-| **📊 Live CV Integration** | Portfolio data dynamically sourced from `cv.json` for easy updates |
-| **⚡ Blazing Fast** | Built with Astro for optimal performance and SEO | 
+| **Neovim Theme** | A sleek, terminal-inspired interface that mimics the Neovim editor experience |
+| **Fully Responsive** | Perfectly adapts to all screen sizes - desktop, tablet, and mobile | 
+| **Live CV Integration** | Portfolio data dynamically sourced from `cv.json` for easy updates |
+| **Blazing Fast** | Built with Astro for optimal performance and SEO |
 
 </div>
 
 ---
-
-
 
 <div align="center">
   <a href="https://github.com/gab-dev-7">
@@ -45,4 +43,4 @@ I'm Gabriel Windlin, a passionate Computer Science student with a keen interest 
 
 ---
 
-> **💡 Pro Tip**: Press `?` on the live site to see available keyboard shortcuts that enhance the Neovim-like experience!
+> **Pro Tip**: Press `?` on the live site to see available keyboard shortcuts that enhance the Neovim-like experience!
