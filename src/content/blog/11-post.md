@@ -1,7 +1,7 @@
 ---
 title: "Smart Cracking: Teaching Python to 'Guess' Like a Human"
 description: "Why brute force is dead, and how I built a Markov Chain engine to predict passwords based on probability."
-publishDate: "2026-02-05"
+publishDate: "2026-01-24"
 tags: ["python", "security", "algorithms", "math"]
 ---
 
