@@ -96,3 +96,8 @@ blockquote {
   font-style: italic;
   color: var(--text-muted);
 }
+
+/* KaTeX MathML Fix */
+.katex-mathml {
+  display: none !important;
+}

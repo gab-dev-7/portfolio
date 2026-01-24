@@ -16,7 +16,7 @@ export default defineConfig({
 
   markdown: {
     remarkPlugins: [remarkMath],
-    rehypePlugins: [[rehypeKatex, { output: "html" }]],
+    rehypePlugins: [rehypeKatex],
     shikiConfig: {
       theme: "catppuccin-mocha",
       wrap: true,
