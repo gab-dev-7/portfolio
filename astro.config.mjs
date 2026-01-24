@@ -3,6 +3,8 @@ import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
 import path from "path";
 import sitemap from "@astrojs/sitemap";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 const projectRoot = path.resolve(process.cwd());
 
@@ -13,6 +15,8 @@ export default defineConfig({
   output: "static",
 
   markdown: {
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeKatex],
     shikiConfig: {
       theme: "catppuccin-mocha",
       wrap: true,
