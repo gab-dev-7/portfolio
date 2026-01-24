@@ -4,6 +4,12 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"
+    integrity="sha384-zh0CI7ezLEp7NJ6BYp1vNJvG373Y7S7LWueMSpfD732LhV37P8vV/IAnpL8E4wz"
+    crossorigin="anonymous"
+  />
   <div class="container">
     <header>
       <div class="meta">
