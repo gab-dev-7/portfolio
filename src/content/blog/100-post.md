@@ -199,7 +199,7 @@ base64 -d data.txt
 
 ## Conclusion
 
-At this point, you aren't "hacking" yet—you're just administrating. But these skills are the foundation. If you can't filter a text stream or find a config file by its permissions, you can't escalate privileges.
+At this point, you aren't "hacking" yet. You're just administrating. But these skills are the foundation. If you can't filter a text stream or find a config file by its permissions, you can't escalate privileges.
 
 Next time, we'll dive into **Level 11-20**, where we start dealing with networking, compression, and SSH keys.
 
