@@ -104,18 +104,19 @@ blockquote {
 
 /* Spoiler / Blurred Text Effect for Blog */
 .spoiler {
-  background-color: #333;
+  background-color: rgba(var(--accent-cyan-rgb), 0.1);
   color: transparent;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 10px var(--accent-cyan);
   border-radius: 4px;
   padding: 0 4px;
   user-select: none; /* Prevents cheating by highlighting */
-  cursor: pointer;
+  cursor: pointer !important; /* Overrides the * { cursor: auto !important } reset */
   transition: all 0.3s ease;
 }
 
-.spoiler:hover {
-  color: #fff;
+.spoiler:hover,
+.spoiler:active {
+  color: var(--text-main);
   text-shadow: none;
   background-color: transparent;
   user-select: text;
