@@ -1,7 +1,7 @@
 ---
 title: "The Only Linux Course You Need: OverTheWire Bandit (0-10)"
 description: "Why grep and find are better than Metasploit, and a walkthrough of the first 10 levels of Bandit with blurred flags."
-publishDate: "2026-01-25"
+publishDate: "2026-01-28"
 tags: ["linux", "ctf", "bash", "security"]
 ---
 
