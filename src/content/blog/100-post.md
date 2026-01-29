@@ -15,7 +15,7 @@ That is why I recommend **OverTheWire: Bandit** to everyone. It isn't just a sec
 - **Permissions:** Who owns what, and why does it matter?
 - **Piping:** How to chain small tools to solve big problems.
 
-Below is my walkthrough for Levels 0–10. I have blurred the flags so you can't just copy-paste them—you have to run the commands yourself.
+Below is my walkthrough for Levels 0–10. I have blurred the flags so you can't just copy-paste them. You have to run the commands yourself.
 
 ## The Setup
 
@@ -154,7 +154,7 @@ grep "millionth" data.txt
 ### Level 8 → 9
 
 **Goal:** The password is the only line of text that occurs only once.
-To find a unique line, we first need to sort them. Why? Because `uniq` only compares adjacent lines—it can't detect duplicates that are separated. Sorting brings all identical lines together.
+To find a unique line, we first need to sort them. Why? Because `uniq` only compares adjacent lines. It can't detect duplicates that are separated. Sorting brings all identical lines together.
 
 ```bash
 sort data.txt | uniq -u
