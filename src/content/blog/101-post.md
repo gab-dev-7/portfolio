@@ -1,7 +1,7 @@
 ---
 title: "The Invisible Navigator: Why I Revisit A* in Java"
 description: "From Google Maps to video games: dissecting the algorithm that guides us, using the language that built the enterprise."
-publishDate: "2026-02-02"
+publishDate: "2026-01-31"
 tags: ["Java", "Algorithms", "CS Theory", "Pathfinding"]
 ---
 
