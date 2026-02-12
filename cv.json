@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Gabriel Windlin",
-    "label": "CS Student and Tech enthusiast",
+    "label": "Computer Science Student @ ETH Zürich | Systems & Security Enthusiast",
     "image": "/bild.png",
     "email": "gawindlin@gmail.com",
     "phone": "+41 79 866 7358",
     "url": "https://gawindlin.com",
-    "summary": "Computer Science student at ETH Zürich. I'm most interested in Cyber Security, Machine Learning, Software Development and Architecture. I am always open to collaborating on interesting projects or discussing new ideas in tech. Feel free to connect!",
+    "summary": "Computer Science student at ETH Zürich. I'm most interested in Systems Programming, Cyber Security, and Machine Learning. I am always open to collaborating on interesting projects or discussing new ideas in tech. Feel free to connect!",
     "theme": "dark",
     "location": {
       "city": "Zürich",
@@ -27,6 +27,13 @@
         "url": "https://linkedin.com/in/gabriel-windlin",
         "icon": "linkedin",
         "color": "#0077b5"
+      },
+      {
+        "network": "Email",
+        "username": "gawindlin",
+        "url": "mailto:gawindlin@gmail.com",
+        "icon": "mail",
+        "color": "#D14836"
       }
     ]
   },
@@ -41,31 +48,20 @@
       "highlights": [
         "Deployed 'Rallly' on the association's local cluster using Kubernetes.",
         "Configured container orchestration and networking for self-hosted student services.",
-        " maintained and monitored on-premise server resources."
+        "Maintained and monitored on-premise server resources, gaining hands-on Linux administration experience."
       ]
     },
     {
-      "name": "PureGym",
-      "position": "Helper",
-      "url": "",
-      "startDate": "2025-06-01",
-      "endDate": null,
-      "summary": "Ensuring operational excellence and member support.",
-      "highlights": [
-        "Assisted with front desk operations and check-ins.",
-        "Maintained environment safety and equipment functionality."
-      ]
-    },
-    {
-      "name": "Skills Park",
-      "position": "All-rounder",
+      "name": "PureGym / Skills Park",
+      "position": "Customer Service & Operations",
       "url": "",
       "startDate": "2022-03-01",
       "endDate": null,
-      "summary": "Customer service and workflow optimization.",
+      "summary": "Ensuring operational excellence and member support in fast-paced environments.",
       "highlights": [
-        "Optimized workflow efficiency with team members.",
-        "Managed cash drawer accounting and customer needs."
+        "Developed strong interpersonal and communication skills serving a diverse client base.",
+        "Maintained environment safety and equipment functionality.",
+        "Managed cash drawer accounting and optimized workflow efficiency with team members."
       ]
     }
   ],
@@ -82,7 +78,7 @@
         "Algorithms & Data Structures",
         "Linear Algebra",
         "Discrete Mathematics",
-        "Java Programming"
+        "Systems Programming in C"
       ]
     }
   ],
@@ -90,100 +86,148 @@
     {
       "name": "Systems & Low Level",
       "level": "Advanced",
-      "keywords": ["C", "POSIX Sockets", "Linux", "Python", "Java"]
+      "keywords": ["C", "Rust", "POSIX Sockets", "Linux", "Python", "Java"]
     },
     {
       "name": "DevOps & Cloud",
       "level": "Intermediate",
-      "keywords": ["Kubernetes", "Docker", "Git", "Container Orchestration"]
+      "keywords": ["Kubernetes", "Docker", "Supabase", "Git", "Container Orchestration", "Caddy"]
     },
     {
       "name": "Web & Tools",
       "level": "Intermediate",
-      "keywords": ["TypeScript", "HTML/CSS", "YAML", "Neovim"]
+      "keywords": ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Ratatui", "Neovim"]
     }
   ],
   "projects": [
     {
-      "name": "Homelab",
+      "name": "Raw Socket Packet Sniffer",
       "isActive": true,
-      "description": "Converged homelab infrastructure designed for reliability and resource efficiency.",
+      "description": "A low-level network analysis tool built using raw sockets to capture and analyze Ethernet frames in real-time.",
       "highlights": [
-        "Microservices orchestration with Docker Compose and Caddy ingress.",
-        "Centralized PostgreSQL 16 and Redis clusters for resource optimization.",
-        "Automated workflows with Bash, Cron, and Split-Horizon DNS."
+        "Manual parsing of Ethernet, IP, TCP, and UDP headers",
+        "Custom implementation of the PCAP file format for Wireshark compatibility",
+        "Real-time DNS and TCP protocol filtering and payload inspection"
       ],
-      "url": "#",
-      "github": ""
+      "url": "https://github.com/gab-dev-7/packet-sniffer",
+      "github": "https://github.com/gab-dev-7/packet-sniffer"
     },
     {
-      "name": "sec-suite",
+      "name": "Neural Network in C",
       "isActive": true,
-      "description": "Comprehensive security testing toolkit for password auditing and network analysis.",
+      "description": "A modular neural network built from scratch in pure C, featuring backpropagation, momentum, and gradient checking.",
       "highlights": [
-        "Advanced password cracking (Markov, Dictionary).",
-        "Multi-threaded brute force engine.",
-        "Modern hash support (bcrypt, argon2) & keylogger."
+        "Backpropagation from first principles",
+        "Dynamic Topology & Activation Functions",
+        "Advanced training features: L2 Regularization, Momentum"
       ],
-      "url": "https://cli.gawindlin.com/sec-suite/",
-      "github": "https://github.com/gab-dev-7/sec-suite"
+      "url": "/blog/111-post",
+      "github": "https://github.com/gab-dev-7/neural_network"
     },
     {
-      "name": "port-scanner",
+      "name": "Our Place",
       "isActive": true,
-      "description": "High-performance, single-file TCP scanner written in C using non-blocking I/O.",
+      "description": "A collaborative digital space featuring real-time media sync, interactive memory maps, and a gamified relationship tracker.",
       "highlights": [
-        "Uses non-blocking sockets and select() for precise timeouts.",
-        "Implements EINPROGRESS handling for robust async connections.",
-        "Zero external dependencies."
+        "Full-stack React 18 & Supabase",
+        "Real-time media synchronization",
+        "Interactive Geocoding & Mapping"
+      ],
+      "url": "https://our-place.gawindlin.com",
+      "github": "https://github.com/gab-dev-7/our-place"
+    },
+    {
+      "name": "Kiroku-TUI",
+      "isActive": true,
+      "description": "A high-performance terminal-based journaling tool in Rust with fuzzy search, Git-sync, and file watching.",
+      "highlights": [
+        "Built with Rust & Ratatui",
+        "Git-based synchronization",
+        "Fuzzy search & YAML frontmatter tagging"
+      ],
+      "url": "https://github.com/gab-dev-7/kiroku",
+      "github": "https://github.com/gab-dev-7/kiroku"
+    },
+    {
+      "name": "TCP Port Scanner",
+      "isActive": true,
+      "description": "High-performance, single-file TCP scanner written in C using non-blocking I/O and select().",
+      "highlights": [
+        "Uses non-blocking sockets for precise timeouts",
+        "Implements EINPROGRESS & SO_ERROR handling",
+        "Zero external dependencies"
       ],
       "url": "https://cli.gawindlin.com/port-scanner/",
       "github": "https://github.com/gab-dev-7/port-scanner"
     },
     {
-      "name": "matrix-calculator",
+      "name": "SEC-SUITE",
       "isActive": true,
-      "description": "Built with Spring Boot for the backend and JavaScript for the frontend.",
+      "description": "Comprehensive security testing toolkit for password auditing and network analysis.",
       "highlights": [
-        "Supports matrix addition, subtraction, and multiplication.",
-        "Java Spring Boot Backend.",
-        "Interactive React Frontend."
+        "Advanced password cracking (Markov, Dictionary)",
+        "Multi-threaded brute force engine",
+        "Modern hash support (bcrypt, argon2)"
+      ],
+      "url": "https://cli.gawindlin.com/sec-suite/",
+      "github": "https://github.com/gab-dev-7/sec-suite"
+    },
+    {
+      "name": "Homelab Infrastructure",
+      "isActive": true,
+      "description": "Converged microservices infrastructure designed for reliability and resource efficiency on limited hardware.",
+      "highlights": [
+        "Orchestration with Docker Compose & Caddy",
+        "Shared PostgreSQL & Redis resource pattern",
+        "Security with CrowdSec & Split-Horizon DNS"
+      ],
+      "url": "/blog/01-post",
+      "github": ""
+    },
+    {
+      "name": "Matrix Calculator",
+      "isActive": true,
+      "description": "Full-stack mathematical tool for complex linear algebra operations.",
+      "highlights": [
+        "Java Spring Boot Backend",
+        "Interactive React Frontend",
+        "Robust RESTful API architecture"
       ],
       "url": "http://matrixcalc.gawindlin.com/",
       "github": "https://github.com/gab-dev-7/MatrixCalculator"
     },
     {
-      "name": "dotfiles",
+      "name": "Dotfiles",
       "isActive": true,
-      "description": "My personal system configurations and development environment setup.",
+      "description": "My personal system configurations and development environment setup for Arch Linux.",
       "highlights": [
-        "Neovim, Zsh, and Hyprland configurations.",
-        "Automated installation scripts.",
-        "Documentation site available."
+        "Neovim, Zsh, and Hyprland configurations",
+        "Automated installation scripts",
+        "Infrastructure as Code approach"
       ],
       "url": "https://dotfiles.gawindlin.com/",
       "github": "https://github.com/gab-dev-7/dotfiles"
     },
     {
-      "name": "chat-app",
+      "name": "Chat Application",
       "isActive": true,
-      "description": "A basic, single-connection TCP chat application implemented in C that demonstrates fundamental socket programming concepts.",
+      "description": "A raw TCP client-server chat application implemented in C to master socket programming fundamentals.",
       "highlights": [
-        "Implemented in C with POSIX sockets.",
-        "Demonstrates fundamental TCP/IP concepts.",
-        "Single-server, single-client architecture."
+        "Implemented with BSD socket API",
+        "Concurrent connection handling",
+        "Custom command-line interface"
       ],
       "url": "https://cli.gawindlin.com/chat-app/",
       "github": "https://github.com/gab-dev-7/chat-app"
     },
     {
-      "name": "screen-savor",
+      "name": "Screen Savor",
       "isActive": true,
-      "description": "A captivating web experiment that transforms your browser into a canvas for generative art.",
+      "description": "A responsive movie discovery web app that integrates with the TMDB API.",
       "highlights": [
-        "Browse the latest trending and top-rated movies.",
-        "Search for any film and preview its trailers.",
-        "Built with React, JS, CSS and HTML for a smooth experience."
+        "Real-time data fetching with TMDB API",
+        "Responsive design patterns",
+        "Vanilla JavaScript state management"
       ],
       "url": "https://screen-savor.gawindlin.com/",
       "github": "https://github.com/gab-dev-7/screen-savor"
