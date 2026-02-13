@@ -114,7 +114,6 @@ document.addEventListener('ninjakeys-matrix', () => {
 
 import { decryptAnimation } from './animations';
 
-// 3. Scroll Animations
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
