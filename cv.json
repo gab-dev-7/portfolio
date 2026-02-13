@@ -257,18 +257,6 @@
       ],
       "url": "#",
       "github": ""
-    },
-    {
-      "name": "Have an idea?",
-      "isActive": false,
-      "description": "Passionate about building impactful technology and always open to new challenges, collaborations, or technical discussions.",
-      "highlights": [
-        "Open source collaboration",
-        "Innovative project development",
-        "Available for technical consulting"
-      ],
-      "url": "mailto:gawindlin@gmail.com",
-      "github": ""
     }
   ]
 }
