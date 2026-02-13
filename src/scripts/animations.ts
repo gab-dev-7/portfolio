@@ -1,5 +1,3 @@
-import gsap from "gsap";
-
 export function decryptAnimation(element: HTMLElement) {
   const originalText = element.dataset.text || element.innerText;
   element.dataset.text = originalText;
