@@ -1,0 +1,41 @@
+---
+import { basics } from "@cv";
+
+const { email } = basics;
+---
+
+<div class="contact-content">
+  <p>
+    There’s no complex handshake required. I’m always open to discussing
+    interesting topics or potential collaborations. If you have an idea or just
+    want to say hello, feel free to <a href={`mailto:${email}`} class="action-link"
+      >Initiate connection</a
+    >.
+  </p>
+</div>
+
+<style>
+  .contact-content {
+    margin-top: 1rem;
+  }
+
+  p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .action-link {
+    color: var(--text-main);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    border-bottom: 1px solid transparent;
+  }
+
+  .action-link:hover {
+    color: var(--accent-pink);
+    border-bottom-color: var(--accent-pink);
+  }
+</style>
