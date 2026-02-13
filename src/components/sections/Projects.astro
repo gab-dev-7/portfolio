@@ -5,8 +5,10 @@ import { Icon } from "astro-icon/components";
 
 <div class="grid">
   {
-    projects.map(({ url, description, highlights, name, github }) => {
-      return (
+    projects
+      .filter(({ isActive }) => isActive !== false)
+      .map(({ url, description, highlights, name, github }) => {
+        return (
         <div class="card">
           <a
             href={url}
