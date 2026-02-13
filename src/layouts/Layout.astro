@@ -16,11 +16,10 @@ interface Props {
 const {
   title,
   image = CV.basics.image,
-  canonicalURL = CV.basics.url,
   keywords = ["Gabriel Windlin", "Security", "Portfolio"],
 } = Astro.props;
 
-const { url, theme, name, location } = CV.basics;
+const { url, name } = CV.basics;
 const detailedDescription = `Gabriel Windlin - Security Engineer & Developer. Explore my portfolio.`;
 
 const structuredData = {
@@ -46,6 +45,7 @@ const structuredData = {
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
     <script
+      is:inline
       type="module"
       src="https://unpkg.com/ninja-keys@1.2.2/dist/ninja-keys.js"></script>
     <script is:inline>
@@ -86,7 +86,6 @@ const structuredData = {
     <script src="../scripts/main.ts"></script>
 
     <script is:inline>
-      // 1. Initialize Theme
       const getTheme = () => {
         return "dark";
       };
@@ -105,7 +104,6 @@ const structuredData = {
       // Apply on load
       setTheme(getTheme());
 
-      // 4. Neovim Mode Shortcut
       window.addEventListener("keydown", (e) => {
         if (e.key === "v") {
           window.location.href = "/neovim";
