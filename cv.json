@@ -44,7 +44,7 @@
       "url": "https://vis.ethz.ch",
       "startDate": "2025-10-01",
       "endDate": null,
-      "summary": "Deploying Applications and helping to manage the VIS clusters.",
+      "summary": "Managing association infrastructure by deploying student services and maintaining on-premise Kubernetes clusters.",
       "highlights": [
         "Deployed 'Rallly' on the association's local cluster using Kubernetes.",
         "Configured container orchestration and networking for self-hosted student services.",
@@ -57,7 +57,7 @@
       "url": "",
       "startDate": "2022-03-01",
       "endDate": null,
-      "summary": "Ensuring operational excellence and member support in fast-paced environments.",
+      "summary": "Providing high-quality customer service and ensuring seamless operations within a dynamic, high-traffic fitness environment.",
       "highlights": [
         "Developed strong interpersonal and communication skills serving a diverse client base.",
         "Maintained environment safety and equipment functionality.",
@@ -91,35 +91,49 @@
     {
       "name": "DevOps & Cloud",
       "level": "Intermediate",
-      "keywords": ["Kubernetes", "Docker", "Supabase", "Git", "Container Orchestration", "Caddy"]
+      "keywords": [
+        "Kubernetes",
+        "Docker",
+        "Supabase",
+        "Git",
+        "Container Orchestration",
+        "Caddy"
+      ]
     },
     {
       "name": "Web & Tools",
       "level": "Intermediate",
-      "keywords": ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Ratatui", "Neovim"]
+      "keywords": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Ratatui",
+        "Neovim"
+      ]
     }
   ],
   "projects": [
     {
       "name": "Raw Socket Packet Sniffer",
       "isActive": true,
-      "description": "A low-level network analysis tool built using raw sockets to capture and analyze Ethernet frames in real-time.",
+      "description": "Low-level network analysis tool utilizing raw sockets to intercept and decode Ethernet frames with live traffic visualization.",
       "highlights": [
-        "Manual parsing of Ethernet, IP, TCP, and UDP headers",
-        "Custom implementation of the PCAP file format for Wireshark compatibility",
-        "Real-time DNS and TCP protocol filtering and payload inspection"
+        "Manual parsing of Ethernet, IP, TCP, and UDP protocols",
+        "Custom PCAP implementation for seamless Wireshark integration",
+        "Dynamic protocol filtering and deep packet payload inspection"
       ],
       "url": "https://github.com/gab-dev-7/packet-sniffer",
       "github": "https://github.com/gab-dev-7/packet-sniffer"
     },
     {
-      "name": "Neural Network in C",
+      "name": "Neural Network",
       "isActive": true,
-      "description": "A modular neural network built from scratch in pure C, featuring backpropagation, momentum, and gradient checking.",
+      "description": "Modular deep learning framework engineered in pure C, implementing backpropagation, momentum, and gradient checking from first principles.",
       "highlights": [
-        "Backpropagation from first principles",
-        "Dynamic Topology & Activation Functions",
-        "Advanced training features: L2 Regularization, Momentum"
+        "Efficient matrix-based backpropagation implementation",
+        "Dynamic topology supporting various activation functions",
+        "Optimization techniques: L2 Regularization and Momentum"
       ],
       "url": "/blog/111-post",
       "github": "https://github.com/gab-dev-7/neural_network"
@@ -127,11 +141,11 @@
     {
       "name": "Our Place",
       "isActive": true,
-      "description": "A collaborative digital space featuring real-time media sync, interactive memory maps, and a gamified relationship tracker.",
+      "description": "Collaborative web platform featuring synchronized media playback, interactive memory mapping, and gamified relationship progress tracking.",
       "highlights": [
-        "Full-stack React 18 & Supabase",
-        "Real-time media synchronization",
-        "Interactive Geocoding & Mapping"
+        "Scalable architecture using React 18 and Supabase",
+        "Low-latency data and media synchronization",
+        "Geocoding integration for interactive spatial memories"
       ],
       "url": "https://our-place.gawindlin.com",
       "github": "https://github.com/gab-dev-7/our-place"
@@ -139,11 +153,11 @@
     {
       "name": "Kiroku-TUI",
       "isActive": true,
-      "description": "A high-performance terminal-based journaling tool in Rust with fuzzy search, Git-sync, and file watching.",
+      "description": "Terminal-based journaling application developed in Rust, optimized for speed with fuzzy search, Git integration, and live file monitoring.",
       "highlights": [
-        "Built with Rust & Ratatui",
-        "Git-based synchronization",
-        "Fuzzy search & YAML frontmatter tagging"
+        "Responsive TUI built with Rust and Ratatui",
+        "Automated version control via Git-based synchronization",
+        "Fast content discovery with fuzzy search and metadata tagging"
       ],
       "url": "https://github.com/gab-dev-7/kiroku",
       "github": "https://github.com/gab-dev-7/kiroku"
@@ -151,11 +165,11 @@
     {
       "name": "TCP Port Scanner",
       "isActive": true,
-      "description": "High-performance, single-file TCP scanner written in C using non-blocking I/O and select().",
+      "description": "Efficient single-file TCP scanner leveraging non-blocking I/O and select() to achieve rapid port discovery in C.",
       "highlights": [
-        "Uses non-blocking sockets for precise timeouts",
-        "Implements EINPROGRESS & SO_ERROR handling",
-        "Zero external dependencies"
+        "Non-blocking socket architecture for precise timeout control",
+        "Advanced error handling with EINPROGRESS and SO_ERROR",
+        "Lightweight implementation with zero external dependencies"
       ],
       "url": "https://cli.gawindlin.com/port-scanner/",
       "github": "https://github.com/gab-dev-7/port-scanner"
@@ -163,11 +177,11 @@
     {
       "name": "SEC-SUITE",
       "isActive": true,
-      "description": "Comprehensive security testing toolkit for password auditing and network analysis.",
+      "description": "Versatile security toolkit designed for automated password auditing and network vulnerability analysis across multiple protocols.",
       "highlights": [
-        "Advanced password cracking (Markov, Dictionary)",
-        "Multi-threaded brute force engine",
-        "Modern hash support (bcrypt, argon2)"
+        "Advanced password cracking using Markov and Dictionary models",
+        "Scalable multi-threaded engine for high-speed brute forcing",
+        "Comprehensive support for modern bcrypt and argon2 hashes"
       ],
       "url": "https://cli.gawindlin.com/sec-suite/",
       "github": "https://github.com/gab-dev-7/sec-suite"
@@ -175,11 +189,11 @@
     {
       "name": "Homelab Infrastructure",
       "isActive": true,
-      "description": "Converged microservices infrastructure designed for reliability and resource efficiency on limited hardware.",
+      "description": "Self-hosted microservices ecosystem optimized for resource efficiency and high availability on consumer-grade hardware.",
       "highlights": [
-        "Orchestration with Docker Compose & Caddy",
-        "Shared PostgreSQL & Redis resource pattern",
-        "Security with CrowdSec & Split-Horizon DNS"
+        "Containerized deployment using Docker Compose and Caddy",
+        "Resource-efficient PostgreSQL and Redis shared instance patterns",
+        "Enhanced security via CrowdSec and Split-Horizon DNS"
       ],
       "url": "/blog/01-post",
       "github": ""
@@ -187,11 +201,11 @@
     {
       "name": "Matrix Calculator",
       "isActive": true,
-      "description": "Full-stack mathematical tool for complex linear algebra operations.",
+      "description": "Mathematical computation engine providing a suite of linear algebra operations through a responsive web interface.",
       "highlights": [
-        "Java Spring Boot Backend",
-        "Interactive React Frontend",
-        "Robust RESTful API architecture"
+        "Robust backend powered by Java and Spring Boot",
+        "Interactive user interface built with modern React",
+        "RESTful API architecture for seamless data processing"
       ],
       "url": "http://matrixcalc.gawindlin.com/",
       "github": "https://github.com/gab-dev-7/MatrixCalculator"
@@ -199,11 +213,11 @@
     {
       "name": "Dotfiles",
       "isActive": true,
-      "description": "My personal system configurations and development environment setup for Arch Linux.",
+      "description": "Automated system configuration and development environment tailored for Arch Linux, focused on productivity and reproducibility.",
       "highlights": [
-        "Neovim, Zsh, and Hyprland configurations",
-        "Automated installation scripts",
-        "Infrastructure as Code approach"
+        "Custom Neovim, Zsh, and Hyprland environment setups",
+        "Modular installation scripts for rapid system deployment",
+        "Declarative configuration following Infrastructure as Code principles"
       ],
       "url": "https://dotfiles.gawindlin.com/",
       "github": "https://github.com/gab-dev-7/dotfiles"
@@ -211,11 +225,11 @@
     {
       "name": "Chat Application",
       "isActive": true,
-      "description": "A raw TCP client-server chat application implemented in C to master socket programming fundamentals.",
+      "description": "Direct TCP client-server communication suite implemented in C to explore concurrency and socket programming fundamentals.",
       "highlights": [
-        "Implemented with BSD socket API",
-        "Concurrent connection handling",
-        "Custom command-line interface"
+        "Core networking built with the BSD socket API",
+        "Concurrent connection handling for multiple active users",
+        "Intuitive CLI for real-time message exchange"
       ],
       "url": "https://cli.gawindlin.com/chat-app/",
       "github": "https://github.com/gab-dev-7/chat-app"
@@ -223,11 +237,11 @@
     {
       "name": "Screen Savor",
       "isActive": true,
-      "description": "A responsive movie discovery web app that integrates with the TMDB API.",
+      "description": "Cinematic discovery platform integrating with the TMDB API to provide a seamless movie browsing and search experience.",
       "highlights": [
-        "Real-time data fetching with TMDB API",
-        "Responsive design patterns",
-        "Vanilla JavaScript state management"
+        "Dynamic data retrieval with optimized TMDB API calls",
+        "Mobile-first responsive design for all device types",
+        "Efficient state management using vanilla JavaScript"
       ],
       "url": "https://screen-savor.gawindlin.com/",
       "github": "https://github.com/gab-dev-7/screen-savor"
@@ -235,11 +249,11 @@
     {
       "name": "Upcoming Project",
       "isActive": false,
-      "description": "Something awesome is brewing in the lab. Check back soon for updates!",
+      "description": "Currently developing an ambitious new project in the lab. Stay tuned for the official reveal and open-source release.",
       "highlights": [
-        "Top Secret",
-        "Under Construction",
-        "Coming Soon"
+        "Research and development phase",
+        "Experimental feature implementation",
+        "Public beta coming soon"
       ],
       "url": "#",
       "github": ""
@@ -247,11 +261,11 @@
     {
       "name": "Have an idea?",
       "isActive": false,
-      "description": "I'm always open to new challenges and collaborations. Reach out!",
+      "description": "Passionate about building impactful technology and always open to new challenges, collaborations, or technical discussions.",
       "highlights": [
-        "Collaboration",
-        "Innovation",
-        "Let's Build"
+        "Open source collaboration",
+        "Innovative project development",
+        "Available for technical consulting"
       ],
       "url": "mailto:gawindlin@gmail.com",
       "github": ""
