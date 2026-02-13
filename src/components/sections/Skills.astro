@@ -7,10 +7,8 @@ import { skills } from "@cv";
     skills.map(({ name, keywords }) => {
       return (
         <li>
-          {/* This renders the category title: Languages, DevOps, etc. */}
           <h3 class="font-mono text-sm mb-2 text-skin-base">{name}</h3>
           <div class="flex flex-wrap gap-2">
-            {/* This renders the individual tags */}
             {keywords.map((key) => (
               <span class="text-xs px-2 py-1 bg-skin-button-muted/20 text-skin-muted font-mono ring-1 ring-skin-muted/50 hover:text-[rgb(255,0,85)] hover:ring-[rgb(255,0,85)] transition-all cursor-default">
                 {key}
