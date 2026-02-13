@@ -12,8 +12,10 @@ import { Icon } from "astro-icon/components";
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       {
-        projects.map(
-          ({ name, description, url, highlights, isActive, github }) => (
+        projects
+          .filter(({ isActive }) => isActive !== false)
+          .map(
+            ({ name, description, url, highlights, isActive, github }) => (
             <div class="group relative p-4 border border-skin-muted/30 rounded bg-skin-button-muted/10 hover:border-skin-accent transition-colors">
               <div class="flex justify-between items-start mb-2">
                 <h3 class="text-lg text-skin-base group-hover:text-skin-accent transition-colors">
