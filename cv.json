@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Gabriel Windlin",
-    "label": "Computer Science Student @ ETH Zürich | Systems & Security Enthusiast",
+    "label": "",
     "image": "/bild.png",
     "email": "gawindlin@gmail.com",
     "phone": "+41 79 866 7358",
     "url": "https://gawindlin.com",
-    "summary": "Computer Science student at ETH Zürich. I'm most interested in Systems Programming, Cyber Security, and Machine Learning. I am always open to collaborating on interesting projects or discussing new ideas in tech. Feel free to connect!",
+    "summary": "I'm most interested in Systems Programming, Cyber Security, and Machine Learning. I am always open to collaborating on interesting projects or discussing new ideas in tech. Feel free to connect!",
     "theme": "dark",
     "location": {
       "city": "Zürich",
@@ -43,7 +43,7 @@
       "position": "Computer Infrastructure Team",
       "url": "https://vis.ethz.ch",
       "startDate": "2025-10-01",
-      "endDate": null,
+      "endDate": "2026-02-01",
       "summary": "Managing association infrastructure by deploying student services and maintaining on-premise Kubernetes clusters.",
       "highlights": [
         "Deployed 'Rallly' on the association's local cluster using Kubernetes.",
